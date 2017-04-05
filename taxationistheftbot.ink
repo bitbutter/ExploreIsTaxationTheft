@@ -164,4 +164,5 @@ We would condemn a private business if it operated this way - imposing unwanted 
 If you have any general feedback you'd like to share, feel free to send it to Tomasz at \[info@redshiftmedia.com\](mailto:info@redshiftmedia.com?Subject=Simulated%20libertarian%20%3A%20Is%20taxation%20theft%3F%20Feedback).
 Consider sharing this page on social media if you thought it was interesting or useful.
 You can support Tomasz's work at \[patreon.com/tomaszkaye\](http:\/\/patreon.com/tomaszkaye).
+\[This script is on GitHub\](https:\/\/github.com/bitbutter/ExploreIsTaxationTheft). Pull requests are welcome!
 -> END
