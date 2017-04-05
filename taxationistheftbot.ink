@@ -54,7 +54,7 @@ What do you think theft means?
         ->whatdoestheftmean
         ** Yes. I would call that theft. # b
 - Good. It looks like we agree so far that property and theft are concepts that make sense even without a state or legal system.
-Robbery is a form of theft in which the thief uses force, or the threat of force, to take the victim's property. A mugging is an example of this kind of theft. Libertarians believe taxation is theft, and more specifically robbery.
+Extortion is a form of theft in which the thief uses the threat of force to take the victim's property. Libertarians believe taxation is theft, and more specifically extortion.
 * [\[ More… \]]
 Here's \[Micheal Huemer explaining how libertarians see taxation\](https:\/\/www.libertarianism.org/columns/is-taxation-theft).
 > When the government “taxes” citizens, what this means is that the government demands money from each citizen, under a threat of force: if you do not pay, armed agents hired by the government will take you away and lock you in a cage. This looks like about as clear a case as any of taking people’s property without consent.
@@ -64,7 +64,7 @@ Here's \[Micheal Huemer explaining how libertarians see taxation\](https:\/\/www
 ===what_mistake===
 - (wmopts)
 {wmloop > 5: ->break}
-{So with the phrase 'Taxation is theft', what's the most important mistake do you think libertarians are making?|Is there some other mistake you think libertarians make when they say that taxation is theft?}
+{So with the phrase 'Taxation is theft', what's the most important mistake you think libertarians are making?|Is there some other mistake you think libertarians make when they say that taxation is theft?}
 * {wmloop > 0 } {start.libertarian} I'm finished pretending not to be a libertarian now! # b
         ->ending
 * The citizens have agreed to be taxed.[%%%what_mistake.agreed] # b
