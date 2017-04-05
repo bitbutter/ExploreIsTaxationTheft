@@ -27,34 +27,30 @@ p, a {
     transition: opacity 1.0s;
 }
 
-p.choice{
-    opacity: 0.0;
-    transition: opacity 1.0s;
-}
-
 #story div.show {
     opacity: 1.0;
 }
 
 .priorChoice p{
-   color: #04a512;
+   color: #14861e;
    font-weight: bold;
 }
   
-
+p.choice {
+    opacity: 0.0;
+    transition: opacity 1.0s;
+    text-align: left;
+    margin-left: 40px;
+}
 p.choice.show {
     opacity: 1.0;
-}
-
-p.choice {
-    text-align: center;
 }
 a{
     color: #04a512;
 }
 }
 a:hover {
-    color: #02680b;
+    color: #096711;
 }
 a.externalLink{
     color: #51b0ff;
