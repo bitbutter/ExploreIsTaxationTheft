@@ -6,7 +6,7 @@
     Great! I'm a bot made especially for people who disagree that taxation is theft. Even if you don't end up changing your mind, this simulated conversation might be useful for increasing clarity about your own political views.
         ->whatdoestheftmean
 * (skeptic) I'm not sure, I want to know more.[%%%start.skeptic] # b
-    I understand. To get the most out of this, pretend that you disagree. Choose the responses you think cause the biggest difficulty for someone claiming taxation is theft.
+    I understand. To get the most out of this choose the responses you think cause the biggest difficulty for someone claiming that taxation is theft.
         ->whatdoestheftmean
 * (libertarian) Yes, I agree with it.[%%%start.libertarian] # b
     Great! You can use this page anyway but you'll have to pretend you're not a libertarian.
@@ -55,11 +55,11 @@ What do you think theft means?
         ** Yes. I would call that theft. # b
 - Good. It looks like we agree so far that property and theft are concepts that make sense even without a state or legal system.
 Robbery is a form of theft in which the thief uses force, or the threat of force, to take the victim's property. A mugging is an example of this kind of theft. Libertarians believe taxation is theft, and more specifically robbery.
-* [\[ More… \]] # b
+* [\[ More… \]]
 Here's \[Micheal Huemer explaining how libertarians see taxation\](https:\/\/www.libertarianism.org/columns/is-taxation-theft).
 > When the government “taxes” citizens, what this means is that the government demands money from each citizen, under a threat of force: if you do not pay, armed agents hired by the government will take you away and lock you in a cage. This looks like about as clear a case as any of taking people’s property without consent.
 -
-* [\[ More… \]] # b
+* [\[ More… \]]
 - ->what_mistake 
 ===what_mistake===
 - (wmopts)
@@ -106,7 +106,7 @@ Have your own views on the claim that taxation is theft changed at all?
            
 === nocommonground ===
 We might be at a dead end. If you really feel that way we don't share enough common ground for the conversation to continue.
-* I do really feel that way.[%%%nocommonground.really]
+* I do really feel that way.[%%%nocommonground.really] # b
     ->ending
 * Wait, let's try that last bit again.[%%%nocommonground.redo] # b
 ->->
@@ -121,7 +121,7 @@ We might be at a dead end. If you really feel that way we don't share enough com
     	Perhaps you would voluntarily pay even if you knew you could safely refuse. Let's imagine that many people felt the same way, and that for this majority the threats of violence the government maintains were redundant. Even so, many _others_ would not pay under those circumstances. At least by this group of people the funds are not given willingly.
     * Citizens democratically elect political representatives who run tax programs.[%%%agreement_q.elected] # b
         There are a few problems here. Voting for a political party is not the same as consenting to the rules that party imposes once in power. For instance a vote may be cast as a defensive move to try to prevent the 'greater evil' from gaining power. Even the winners of voting contests do not have the endorsement of the entire population - most often the population who voted for the winner is a minority.
-        ** [\[ More… \]] # b
+        ** [\[ More… \]]
         So the idea that 'the people' elect the ones who end up in power obscures the reality that at very best, a numerical majority voted for them. Libertarians believe that the results of elections cannot establish that the citizens have agreed to be taxed - since even in the best case some minority do not agree.
 	* By living in a country you implicitly agree to abide by the rules of the state, including taxation.[%%%agreement_q.youcanalwaysleave] # b
 	    This reply assumes that the state is the rightful owner of the land. Since if the state was not the owner, it would have no right to impose conditions on anyone staying on that land. Just like I don't have the right to impose conditions on you if you continue to live in your house.
@@ -129,7 +129,7 @@ We might be at a dead end. If you really feel that way we don't share enough com
     * The citizens have the right to overthrow a government that doesn't represent them. As long as revolution isn't happening, the citizens must consider the government legitimate.[%%%agreement_q.rightofrevolution] # b
         A popular revolt might be good evidence of the _illegitimacy_ of government, but the lack of such a revolt can't establish the _legitimacy_ of the government.
         Although a joint effort by a large part of the population may be enough to topple a government, such an undertaking is risky. Especially in light of what we've learned about the surveillance systems of modern states. Unless many people revolt spontaneously and simultaneously, the few who try to _initiate_ such a change can expect to be targeted and to experience unpleasant treatment at the hands of the state.
-        ** [\[ More… \]] # b
+        ** [\[ More… \]]
         Here's an analogy. Even though none of the hostages on the aeroplane is trying to overpower the gunman, that isn't enough to conclude they're all comfortable with the situation. The people wanting to change the balance of power are worried about what may happen to them if they attempt to assert their will unsuccessfully.
         Another problem is that opinions about the legitimacy of government differ among the citizens. The number of people who oppose the government may be too small to overthrow it even if they did all act together. In this case the risks of attempting revolution are much greater. Reluctance to endanger yourself in a risky rebellion isn't the same as consent to being ruled.
     + { agreement_q.agreementloop > 0 } {CHOICE_COUNT() > 0}Okay, I accept that not everyone agrees to taxation. ->break # b
@@ -145,16 +145,16 @@ The state's control of the land depends on conquest and threats of force. It's c
     ++ I see.[%%%state_doesnt_own_land.isee] # b // TODO: skip this if its the olny option 
     ** But many people live on land that was taken by force from someone. Does that mean libertarians think that land can't be owned now?[%%%state_doesnt_own_land.butmany] # b
             No. Libertarians believe that land can be abandoned. In the case of a historical conquest it's often the case that the rightful heirs to the land are either all dead or lost to history. In this case the land is treated as abandoned. Abandoned land can be homesteaded. If an heir to the land ever shows up with a stronger claim to the land than the current occupant, the libertarian view is that the heir should take possession of it.
-            *** [\[ More… \]] # b
+            *** [\[ More… \]]
             In the case of the state taking possession of the land through historical conquest, even if the land was abandoned by the original owners it doesn't follow that the current state is now the the owner of that territory. The simplest reason is that the state has not homesteaded most of that land, it has merely threatened to punish anyone using the land without its permission.
     - ->->
 
 === services ===
 The state does provide services that many people value and are happy to have carried out. But libertarians object that unlike a normal purchase, these services were never requested. And not everyone who is made to pay for the services wanted the state to carry them out.
-* [\[ More… \]].->pos #b
+* [\[ More… \]].->pos
 -(pos)
 As well as services that most feel positively about, the state also carries out tax-funded operations that are much less popular, and very expensive. Like participating in the bombing of citizens in foreign countries. Not only is this activity unrequested by most, it's an activity that _a great many oppose_ and yet are compelled to pay for all the same.
-* [\[ More… \]] ->condemn #b
+* [\[ More… \]] ->condemn
 -(condemn)
 We would condemn a private business if it operated this way - imposing unwanted services on unwilling clients and then demanding payment. So libertarians disagree that taxes can be justified as a fee for services rendered.   
 - ->->
