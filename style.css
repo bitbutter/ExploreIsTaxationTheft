@@ -1,0 +1,70 @@
+body {
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+
+h1 {
+    text-align: center;
+    font-weight: lighter;
+    margin-bottom: 60px;
+}
+
+.container {
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+p, a {
+    color: gray;
+    line-height: 1.7em;
+    font-size: 13pt;
+}
+
+#story div {
+    opacity: 0.0;
+    transition: opacity 1.0s;
+}
+
+p.choice{
+    opacity: 0.0;
+    transition: opacity 1.0s;
+}
+
+#story div.show {
+    opacity: 1.0;
+}
+
+.priorChoice p{
+   color: #04a512;
+   font-weight: bold;
+}
+  
+
+p.choice.show {
+    opacity: 1.0;
+}
+
+p.choice {
+    text-align: center;
+}
+a{
+    color: #04a512;
+}
+}
+a:hover {
+    color: #02680b;
+}
+a.externalLink{
+    color: #51b0ff;
+}
+a.externalLink:hover {
+    color: #2d81c6;
+}
+blockquote{
+font-style: italic;
+}
+blockquote p{
+font-size: 0.95em;
+}
