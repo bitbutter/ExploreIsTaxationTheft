@@ -63,15 +63,14 @@ Here's \[Micheal Huemer explaining how libertarians see taxation\](https:\/\/www
 - ->what_mistake 
 ===what_mistake===
 - (wmopts)
-{state_doesnt_own_land < 1 and wmloop > 6: ->break}
-{state_doesnt_own_land > 0 and wmloop > 5: ->break}
-{So with the phrase 'Taxation is theft', what mistake do you think libertarians are making?|Is there some other mistake you think libertarians make when they say that taxation is theft?}
+{wmloop > 5: ->break}
+{So with the phrase 'Taxation is theft', what's the most important mistake do you think libertarians are making?|Is there some other mistake you think libertarians make when they say that taxation is theft?}
 * {wmloop > 0 } {start.libertarian} I'm finished pretending not to be a libertarian now! # b
         ->ending
-* Taxation isn't theft because you get something in return. It's a fee for services.[%%%what_mistake.fee] # b
+* The citizens have agreed to be taxed.[%%%what_mistake.agreed] # b
+    -> agreement_q ->
+* Taxation isn't theft, it's a fee for all the services that government provides.[%%%what_mistake.fee] # b
     -> services ->
-* { state_doesnt_own_land < 1} The state owns the land and if you stay there you have to pay. Taxes are like rent.[%%%what_mistake.stateownsland] # b
-    -> state_doesnt_own_land ->
 * _We_ are the government, so payments to the government can't be theft[%%%what_mistake.wearegov] # b
     Here's how Murray Rothbard explained the problem with the idea that we are the government in his book \[Anatomy of the State\](https:\/\/mises.org/library/anatomy-state).
     > The government does not in any accurate sense "represent" the majority of the people. But, even if it did, even if 70 percent of the people decided to murder the remaining 30 percent, this would still be murder and would not be voluntary suicide on the part of the slaughtered minority.
@@ -80,11 +79,9 @@ Here's \[Micheal Huemer explaining how libertarians see taxation\](https:\/\/www
         ** What do you mean? # b
             It's logically possible that taxation is theft _and_ we'd all be worse off if there was no taxation. Libertarians generally believe we'd be better off, but we won't go into that here. Right now the focus is on whether or not taxation is theft. 
         ** Yes alright, but it seems like an important thing to keep in mind. # b
-* Without taxation there'd be no way to fund important things that society needs.[%%%what_mistake.funding] # b
+* Without taxation how could we fund the public goods that society needs?[%%%what_mistake.funding] # b
     There are some great books and videos online about how important goods and services could be provided without a government. \[Here's one list with a lot of links that you might find useful\](https:\/\/www.reddit.com/r/Anarcho_Capitalism/comments/zbujt/anyone_got_the_full_set_of_intro_to_liberty/c63ad2x/).
     But even if life without taxation would mean that we'd have to do without all the services currently provided by the state, this wouldn't help to answer the question of whether or not taxation is theft. It could be the case that taxation is theft _and_ we'd be worse off without it.
-* The citizens have agreed to be taxed.[%%%what_mistake.agreed] # b
-    -> agreement_q ->
 * {wmloop > 0 } {not start.libertarian} {CHOICE_COUNT() > 0} Okay, I understand why libertarians say that taxation is theft.[%%%what_mistake.iunderstand] # b
         -> views_changed
 * -> views_changed
@@ -101,7 +98,9 @@ Have your own views on the claim that taxation is theft changed at all?
             Of course.[%%%views_changed.dontknow]
             ->ending
         ** Yes, I'm convinced that taxation _is_ theft.[%%%views_changed.yes] # b
-            That's great to hear! If you feel like it, it'd be a big help for me if you could copy and paste the entire text on this page and email it to \[Tomasz at info@redshiftmedia.com\](mailto:info@redshiftmedia.com?Subject=Explore%20-%20Is%20taxation%20theft.%20Playthrough.). That way I can get a better insight into what arguments people find most important, and adjust the script to prioritise the most important parts.
+            That's great to hear! I'm glad to have helped develop your ideas on the subject.
+            TODO: (todo: links for further reading)
+            If you feel like it, it'd be a big help for me if you could copy and paste the entire text on this page and email it to \[Tomasz at info@redshiftmedia.com\](mailto:info@redshiftmedia.com?Subject=Explore%20-%20Is%20taxation%20theft.%20Playthrough.). That way I can get a better insight into what arguments people find most important, and adjust the script to prioritise the most important parts.
             ->ending
            
 === nocommonground ===
@@ -151,7 +150,7 @@ The state's control of the land depends on conquest and threats of force. It's c
 
 === services ===
 The state does provide services that many people value and are happy to have carried out. But libertarians object that unlike a normal purchase, these services were never requested. And not everyone who is made to pay for the services wanted the state to carry them out.
-* [\[ More… \]].->pos
+* [\[ More… \]] ->pos
 -(pos)
 As well as services that most feel positively about, the state also carries out tax-funded operations that are much less popular, and very expensive. Like participating in the bombing of citizens in foreign countries. Not only is this activity unrequested by most, it's an activity that _a great many oppose_ and yet are compelled to pay for all the same.
 * [\[ More… \]] ->condemn
