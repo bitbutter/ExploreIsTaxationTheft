@@ -3,25 +3,25 @@
 {Libertarians say that taxation is theft. What do you think about that idea?|So what do you think about the idea that taxation is theft?}
 
 * (statist) I disagree with it.[%%%start.statist] # b
-    Great! I'm a bot made especially for people who disagree that taxation is theft. Even if you don't end up changing your mind, this simulated conversation might be useful for increasing clarity about your own political views.
+    Great! I'm a bot made especially for people who disagree that taxation is theft. Even if you don't end up changing your mind, this simulated conversation might be useful for increasing clarity about your own political views. # s
         ->whatdoestheftmean
 * (skeptic) I'm not sure, I want to know more.[%%%start.skeptic] # b
-    I understand. To get the most out of this choose the responses you think cause the biggest difficulty for someone claiming that taxation is theft.
+    I understand. To get the most out of this choose the responses you think cause the biggest difficulty for someone claiming that taxation is theft. # s
         ->whatdoestheftmean
 * (libertarian) Yes, I agree with it.[%%%start.libertarian] # b
-    Great! You can use this page anyway but you'll have to pretend you're not a libertarian.
+    Great! You can use this page anyway but you'll have to pretend you _disagree_. # s
         ->whatdoestheftmean
 * Hold on, what is this thing?[%%%start.whatisthis] # b
     This is a simulated conversation. The aim is to present the main arguments that people make for and against the claim that taxation is theft.
     Impatience and animosity often cloud online exchanges between real people on this subject. This resource is offered as a way to explore the disagreement without any put-downs or name-calling.
         --(metaopts)
         ** Who made this? # b
-            This is a project by \[Tomasz Kaye\](http:\/\/patreon.com/tomaszkaye). It was initiated in April 2017. As time goes on material from other contributors will be added.
+            I'm \[Tomasz Kaye\](http:\/\/patreon.com/tomaszkaye). I initiated this project in April 2017. As time goes on material from other contributors will be added.
             ->metaopts
         ** Isn't this biased towards libertarianism? # b
             ---(biased)
-            Yes it is. The owner of this project believes that taxation is theft.
-            He's tried to represent and reply to the strongest counter-arguments he knows of but you might have an objection that he didn't think of. If that turns out to be true please feel free to email Tomasz at \[info@redshiftmedia.com\](mailto:info@redshiftmedia.com?Subject=Simulated%20libertarian%20%3A%20Is%20taxation%20theft%3F%20Suggestion) with your suggestion for improvement.
+            Yes it is. I believe that taxation is theft.
+            In the script I've represented and replied to the strongest counter-arguments I know. But you might have an objection that I didn't think of. If that turns out to be true please feel free to email me at \[info@redshiftmedia.com\](mailto:info@redshiftmedia.com?Subject=Simulated%20libertarian%20%3A%20Is%20taxation%20theft%3F%20Suggestion) with your suggestion for improvement.
             I encourage people of different political persuasions to develop their own scripts advancing the points of view they feel strongly about. You can get started using \[Ink\](http:\/\/www.inklestudios.com/ink/), and \[the Ink editor, Inky\](https:\/\/github.com/inkle/inky).
             ->metaopts
         ** {not biased} How was this made? # b
@@ -30,15 +30,17 @@
         ** {CHOICE_COUNT() > 0}Okay, let's go back to the conversation. # b
             -> start
         **  ->backtosim
-        --(backtosim) Back to the simulation. 
+        --(backtosim) Back to the conversation. 
         -> start
-- ->whatdoestheftmean
+-
+->whatdoestheftmean
 
 ===whatdoestheftmean===
+
 What do you think theft means?
 
-+ Theft is taking something without the owner's consent, intending not to give it back.[%%%whatdoestheftmean.taking] # b
-    Yes, I agree. Here's another question about property to make sure our intuitions are the same before we go on.
+* Theft is taking something without the owner's consent, intending not to give it back.[%%%whatdoestheftmean.taking] # b
+    Yes, I agree. Here's another question about property to make sure our intuitions are the same before we go on. # s
     Imagine you get stranded on a remote island. No one else is there. You gather a supply of food and store it under a shelter that you built. Later on, another person arrives on the island. Do you consider yourself the owner of the food you have gathered?
         ** Yes, I feel as though the food I stored is my property. # b
         ** No. Ownership is a fiction. The reality is that the strong take and defend whatever they can. # b
@@ -47,7 +49,7 @@ What do you think theft means?
         ** No. I'm not the owner because ownership can only be a legal concept. It's meaningless without the state. # b
             -> nocommonground ->
             ->whatdoestheftmean
-+ Theft is whatever the law defines it to be[%%%whatdoestheftmean.legalistic] # b
+* Theft is whatever the law defines it to be[%%%whatdoestheftmean.legalistic] # b
     Okay. Imagine you are stranded with a small group on a desert island outside the jurisdiction of any state. Without your permission one of the others takes the food you had gathered and stored. I would call that theft. Wouldn't you?
         ** No. Theft can only be a legal concept. It's meaningless without the state. # b
         -> nocommonground ->
@@ -65,7 +67,7 @@ Here's \[Micheal Huemer explaining how libertarians see taxation\](https:\/\/www
 - (wmopts)
 {wmloop > 5: ->break}
 {So with the phrase 'Taxation is theft', what's the most important mistake you think libertarians are making?|Is there some other mistake you think libertarians make when they say that taxation is theft?}
-* {wmloop > 0 } {start.libertarian} I'm finished pretending not to be a libertarian now! # b
+* {wmloop > 0 } {start.libertarian} I've finished pretending, taxation _is_ theft! # b
         ->ending
 * The citizens have agreed to be taxed.[%%%what_mistake.agreed] # b
     -> agreement_q ->
@@ -96,10 +98,11 @@ Have your own views on the claim that taxation is theft changed at all?
             ->ending
         ** I don't know. I need more time to think about it. # b
             Of course.[%%%views_changed.dontknow]
+        If you'd like to investigate further \[here's a page with links to resources that you might find useful or interesting.\](links.php).
             ->ending
         ** Yes, I'm convinced that taxation _is_ theft.[%%%views_changed.yes] # b
             That's great to hear! I'm glad to have helped develop your ideas on the subject.
-            TODO: (todo: links for further reading)
+            If you'd like to investigate further \[here's a page with links to resources that you might find useful or interesting.\](links.php).
             If you feel like it, it'd be a big help for me if you could copy and paste the entire text on this page and email it to \[Tomasz at info@redshiftmedia.com\](mailto:info@redshiftmedia.com?Subject=Explore%20-%20Is%20taxation%20theft.%20Playthrough.). That way I can get a better insight into what arguments people find most important, and adjust the script to prioritise the most important parts.
             ->ending
            
@@ -108,8 +111,7 @@ We might be at a dead end. If you really feel that way we don't share enough com
 * I do really feel that way.[%%%nocommonground.really] # b
     ->ending
 * Wait, let's try that last bit again.[%%%nocommonground.redo] # b
-->->
-->ending
+    ->->
 
 === agreement_q ===
 	- (agreementqopts)
