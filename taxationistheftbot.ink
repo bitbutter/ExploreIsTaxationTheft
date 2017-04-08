@@ -16,7 +16,9 @@
     Impatience and animosity often cloud online exchanges between real people on this subject. This resource is offered as a way to explore the disagreement without any put-downs or name-calling.
         --(metaopts)
         ** Who made this? # b
-            I'm \[Tomasz Kaye\](http:\/\/patreon.com/tomaszkaye). I initiated this project in April 2017. As time goes on material from other contributors will be added.
+            I'm \[Tomasz Kaye\](http:\/\/patreon.com/tomaszkaye). I initiated this project in April 2017. As time goes on material from other contributors may be added.
+            This project was supported by crowdfunding. Donations from these people were particularly helpful:
+            Peter Rhodes<br/>Jason Dreyzehner<br/>Jarrod Pirtle<br/>Andy Bolton
             ->metaopts
         ** Isn't this biased towards libertarianism? # b
             ---(biased)
