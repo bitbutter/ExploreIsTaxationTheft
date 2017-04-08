@@ -18,7 +18,10 @@
         ** Who made this? # b
             I'm \[Tomasz Kaye\](http:\/\/patreon.com/tomaszkaye). I initiated this project in April 2017. As time goes on material from other contributors may be added.
             This project was supported by crowdfunding. Donations from these people were particularly helpful:
-            Peter Rhodes<br/>Jason Dreyzehner<br/>Jarrod Pirtle<br/>Andy Bolton
+            Peter Rhodes
+            Jason Dreyzehner
+            Jarrod Pirtle
+            Andy Bolton
             ->metaopts
         ** Isn't this biased towards libertarianism? # b
             ---(biased)
@@ -98,8 +101,8 @@ Here's \[Micheal Huemer explaining how libertarians see taxation\](https:\/\/www
 Have your own views on the claim that taxation is theft changed at all?
         ** {not start.skeptic} No, I still disagree that taxation is theft.[%%%views_changed.no] # b
             ->ending
-        ** I don't know. I need more time to think about it. # b
-            Of course.[%%%views_changed.dontknow]
+        ** I don't know. I need more time to think about it.[%%%views_changed.dontknow] # b
+            Of course.
         If you'd like to investigate further \[here's a page with links to resources that you might find useful or interesting.\](links.php).
             ->ending
         ** Yes, I'm convinced that taxation _is_ theft.[%%%views_changed.yes] # b
