@@ -80,12 +80,12 @@ Here's \[Micheal Huemer explaining how libertarians see taxation\](https:\/\/www
     -> services ->
 * _We_ are the government, so payments to the government can't be theft[%%%what_mistake.wearegov] # b
     Here's how Murray Rothbard explained the problem with the idea that we are the government in his book \[Anatomy of the State\](https:\/\/mises.org/library/anatomy-state).
-    > The government does not in any accurate sense "represent" the majority of the people. But, even if it did, even if 70 percent of the people decided to murder the remaining 30 percent, this would still be murder and would not be voluntary suicide on the part of the slaughtered minority.
+    > The government does not, in any accurate sense, "represent" the majority of the people. But, even if it did, even if 70 percent of the people decided to murder the remaining 30 percent, this would still be murder and would not be voluntary suicide on the part of the slaughtered minority.
 * Without taxation the government couldn't exist.[%%%what_mistake.govcouldntexist] # b
-    Government as we know it wouldn't exist without taxation. But this doesn't have any bearing on whether or not taxation is theft.
+    Government, as we know it, wouldn't exist without taxation. But this doesn't have any bearing on whether or not taxation is theft.
         ** What do you mean? # b
             It's logically possible that taxation is theft _and_ we'd all be worse off if there was no taxation. Libertarians generally believe we'd be better off, but we won't go into that here. Right now the focus is on whether or not taxation is theft. 
-        ** Yes alright, but it seems like an important thing to keep in mind. # b
+        ** Yes, alright, but it seems like an important thing to keep in mind. # b
 * Without taxation how could we fund the public goods that society needs?[%%%what_mistake.funding] # b
     There are some great books and videos online about how important goods and services could be provided without a government. \[Here's one list with a lot of links that you might find useful\](https:\/\/www.reddit.com/r/Anarcho_Capitalism/comments/zbujt/anyone_got_the_full_set_of_intro_to_liberty/c63ad2x/).
     But even if life without taxation would mean that we'd have to do without all the services currently provided by the state, this wouldn't help to answer the question of whether or not taxation is theft. It could be the case that taxation is theft _and_ we'd be worse off without it.
@@ -106,7 +106,7 @@ Have your own views on the claim that taxation is theft changed at all?
         If you'd like to investigate further \[here's a page with links to resources that you might find useful or interesting.\](links.php).
             ->ending
         ** Yes, I'm convinced that taxation _is_ theft.[%%%views_changed.yes] # b
-            That's great to hear! I'm glad to have helped develop your ideas on the subject.
+            That's great to hear! I'm glad to have helped you develop your ideas on the subject.
             If you'd like to investigate further \[here's a page with links to resources that you might find useful or interesting.\](links.php).
             If you feel like it, it'd be a big help for me if you could copy and paste the entire text on this page and email it to \[Tomasz at info@redshiftmedia.com\](mailto:info@redshiftmedia.com?Subject=Explore%20-%20Is%20taxation%20theft.%20Playthrough.). That way I can get a better insight into what arguments people find most important, and adjust the script to prioritise the most important parts.
             ->ending
@@ -130,11 +130,11 @@ We might be at a dead end. If you really feel that way we don't share enough com
         ** [\[ More… \]]
         So the idea that 'the people' elect the ones who end up in power obscures the reality that at very best, a numerical majority voted for them. Libertarians believe that the results of elections cannot establish that the citizens have agreed to be taxed - since even in the best case some minority do not agree.
 	* By living in a country you implicitly agree to abide by the rules of the state, including taxation.[%%%agreement_q.youcanalwaysleave] # b
-	    This reply assumes that the state is the rightful owner of the land. Since if the state was not the owner, it would have no right to impose conditions on anyone staying on that land. Just like I don't have the right to impose conditions on you if you continue to live in your house.
+	    This reply assumes that the state is the rightful owner of the land. Since, if the state was not the owner, it would have no right to impose conditions on anyone staying on that land. Just like I don't have the right to impose conditions on you if you continue to live in your house.
 	        { state_doesnt_own_land < 1: -> state_doesnt_own_land ->|We talked earlier about the problem with the assumption that the state owns the land.}
     * The citizens have the right to overthrow a government that doesn't represent them. As long as revolution isn't happening, the citizens must consider the government legitimate.[%%%agreement_q.rightofrevolution] # b
         A popular revolt might be good evidence of the _illegitimacy_ of government, but the lack of such a revolt can't establish the _legitimacy_ of the government.
-        Although a joint effort by a large part of the population may be enough to topple a government, such an undertaking is risky. Especially in light of what we've learned about the surveillance systems of modern states. Unless many people revolt spontaneously and simultaneously, the few who try to _initiate_ such a change can expect to be targeted and to experience unpleasant treatment at the hands of the state.
+        Although a joint effort by a large part of the population may be enough to topple a government, such an undertaking is risky, especially in light of what we've learned about the surveillance practices of modern states. Unless many people revolt spontaneously and simultaneously, the few who try to _initiate_ such a change can expect to be targeted and to experience unpleasant treatment at the hands of the state.
         ** [\[ More… \]]
         Here's an analogy. Even though none of the hostages on the aeroplane is trying to overpower the gunman, that isn't enough to conclude they're all comfortable with the situation. The people wanting to change the balance of power are worried about what may happen to them if they attempt to assert their will unsuccessfully.
         Another problem is that opinions about the legitimacy of government differ among the citizens. The number of people who oppose the government may be too small to overthrow it even if they did all act together. In this case the risks of attempting revolution are much greater. Reluctance to endanger yourself in a risky rebellion isn't the same as consent to being ruled.
@@ -152,11 +152,11 @@ The state's control of the land depends on conquest and threats of force. It's c
     ** But many people live on land that was taken by force from someone. Does that mean libertarians think that land can't be owned now?[%%%state_doesnt_own_land.butmany] # b
             No. Libertarians believe that land can be abandoned. In the case of a historical conquest it's often the case that the rightful heirs to the land are either all dead or lost to history. In this case the land is treated as abandoned. Abandoned land can be homesteaded. If an heir to the land ever shows up with a stronger claim to the land than the current occupant, the libertarian view is that the heir should take possession of it.
             *** [\[ More… \]]
-            In the case of the state taking possession of the land through historical conquest, even if the land was abandoned by the original owners it doesn't follow that the current state is now the the owner of that territory. The simplest reason is that the state has not homesteaded most of that land, it has merely threatened to punish anyone using the land without its permission.
+            In the case of the state taking possession of the land through historical conquest, even if the land was abandoned by the original owners, it doesn't follow that the current state is now the the owner of that territory. The simplest reason is that the state has not homesteaded most of that land, it has merely threatened to punish anyone using the land without its permission.
     - ->->
 
 === services ===
-The state does provide services that many people value and are happy to have carried out. But libertarians object that unlike a normal purchase, these services were never requested. And not everyone who is made to pay for the services wanted the state to carry them out.
+The state does provide services that many people value and are happy to have carried out. But libertarians object that, unlike a normal purchase, these services were never requested. And not everyone who is made to pay for the services wanted the state to carry them out.
 * [\[ More… \]] ->pos
 -(pos)
 As well as services that most feel positively about, the state also carries out tax-funded operations that are much less popular, and very expensive. Like participating in the bombing of citizens in foreign countries. Not only is this activity unrequested by most, it's an activity that _a great many oppose_ and yet are compelled to pay for all the same.
