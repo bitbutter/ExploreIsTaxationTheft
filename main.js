@@ -3,6 +3,12 @@
 var story;
 var saved;
 var saves = [];
+
+String.prototype.replaceAll = function(search, replacement) {
+    var target = this;
+    return target.split(search).join(replacement);
+};
+
 (function(storyContent) {
 
     story = new inkjs.Story(storyContent);
@@ -48,10 +54,21 @@ var saves = [];
             }
             // Create paragraph element
             mardownRenderedAsHTML= markdown.toHTML(paragraphText);
+            //console.log(mardownRenderedAsHTML);
+            mardownRenderedAsHTML = mardownRenderedAsHTML.replaceAll('&amp;br&amp;', '<br/>');
+
             paragraphElement.innerHTML = mardownRenderedAsHTML;//markup html with p tags removed;
             storyContainer.appendChild(paragraphElement);
 
             // Set external links to target _blank
+            var links = document.links;
+			for (var i = 0, linksLength = links.length; i < linksLength; i++) {
+			   if (links[i].href != 'http://exploreistaxationtheft.com/#') {
+			       links[i].target = '_blank';
+			       links[i].className = 'externalLink';
+			   } 
+			}
+			// Set external links to target _blank
             var links = document.links;
 			for (var i = 0, linksLength = links.length; i < linksLength; i++) {
 			   if (links[i].href != 'http://exploreistaxationtheft.com/#') {
@@ -131,3 +148,4 @@ var saves = [];
     continueStory();
 
 })(storyContent);
+
