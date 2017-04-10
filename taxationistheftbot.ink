@@ -19,7 +19,7 @@
             I'm \[Tomasz Kaye\](http:\/\/patreon.com/tomaszkaye). I initiated this project in April 2017. As time goes on material from other contributors may be added.
             This project was supported by crowdfunding. Donations from these people were particularly helpful:
             Peter Rhodes
-            Jason Dreyzehner
+            \[Jason Dreyzehner\](https:\/\/twitter.com/bitjson)
             Jarrod Pirtle
             Andy Bolton
             ->metaopts
