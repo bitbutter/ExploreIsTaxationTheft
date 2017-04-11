@@ -174,7 +174,7 @@ The state does provide services that many people value and are happy to have car
 As well as services that most feel positively about, the state also carries out tax-funded operations that are much less popular, and very expensive. Like participating in the bombing of citizens in foreign countries. Not only is this activity unrequested by most, it's an activity that _a great many oppose_ and yet are compelled to pay for all the same.
 * [\[ More… \]] ->condemn
 -(condemn)
-We would condemn a private business if it operated this way - imposing unwanted services on unwilling clients and then demanding payment. So libertarians disagree that taxes can be justified as a fee for services rendered.   
+We would condemn a private business if it operated this way - imposing unwanted 'services' on unwilling clients and then demanding payment. We would not consider the demands for payment that it made against these 'customers' a legitimate fee. So whether or not you are happy to pay taxes yourself, taxes cannot correctly be described as a fee for services rendered by the state.
 - ->->
 
 === ending === 	
