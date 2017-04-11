@@ -11,6 +11,8 @@ h1 {
 img.title{
     opacity: 0.0;
     transition: opacity 1.0s;
+    max-width:100%;
+    height:auto;
 }
 img.title.show{
     opacity: 1.0;

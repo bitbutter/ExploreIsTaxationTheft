@@ -88,8 +88,8 @@ Here's \[Micheal Huemer explaining how libertarians see taxation\](https:\/\/www
         ** What do you mean? # b
             It's logically possible that taxation is theft _and_ we'd all be worse off if there was no taxation. Libertarians generally believe we'd be better off, but we won't go into that here. Right now the focus is on whether or not taxation is theft. 
         ** Yes, alright, but it seems like an important thing to keep in mind. # b
-* Without taxation how could we fund the public goods that society needs?[%%%what_mistake.funding] # b
-    There are some great books and videos online about how important goods and services could be provided without a government. \[Here's one list with a lot of links that you might find useful\](https:\/\/www.reddit.com/r/Anarcho_Capitalism/comments/zbujt/anyone_got_the_full_set_of_intro_to_liberty/c63ad2x/).
+* Without taxation how could we fund the public services that society needs?[%%%what_mistake.funding] # b
+    There are some great books and videos online about how important services could be provided without a government. \[Here's one list with a lot of links that you might find useful\](https:\/\/www.reddit.com/r/Anarcho_Capitalism/comments/zbujt/anyone_got_the_full_set_of_intro_to_liberty/c63ad2x/).
     ![coins](images/city.png)
     But even if life without taxation would mean that we'd have to do without all the services currently provided by the state, this wouldn't help to answer the question of whether or not taxation is theft. It could be the case that taxation is theft _and_ we'd be worse off without it.
 * {wmloop > 0 } {not start.libertarian} {CHOICE_COUNT() > 0} Okay, I understand why libertarians say that taxation is theft.[%%%what_mistake.iunderstand] # b
