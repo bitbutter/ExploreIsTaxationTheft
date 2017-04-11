@@ -3,9 +3,11 @@
 {Libertarians say that taxation is theft. What do you think about that idea?|So what do you think about the idea that taxation is theft?}
 
 * (statist) I disagree with it.[%%%start.statist] # b
+    ![man and woman arguing](images/manwoman.png)
     Great! I'm a bot made especially for people who disagree that taxation is theft. Even if you don't end up changing your mind, this simulated conversation might be useful for increasing clarity about your own political views. # s
         ->whatdoestheftmean
 * (skeptic) I'm not sure, I want to know more.[%%%start.skeptic] # b
+    ![woman and question mark](images/womanandquestionmark.png)
     I understand. To get the most out of this choose the responses you think cause the biggest difficulty for someone claiming that taxation is theft. # s
         ->whatdoestheftmean
 * (libertarian) Yes, I agree with it.[%%%start.libertarian] # b
@@ -13,15 +15,13 @@
         ->whatdoestheftmean
 * Hold on, what is this thing?[%%%start.whatisthis] # b
     This is a simulated conversation. The aim is to present the main arguments that people make for and against the claim that taxation is theft.
-    Impatience and animosity often cloud online exchanges between real people on this subject. This resource is offered as a way to explore the disagreement without any put-downs or name-calling.
+    Online exchanges between real people on this subject are often clouded by impatience and animosity. This resource is offered as a way to explore the disagreement without any put-downs or name-calling.
         --(metaopts)
         ** Who made this? # b
+            [![patreon](images/patreonlink.png)](http:\/\/patreon.com/tomaszkaye)
             I'm \[Tomasz Kaye\](http:\/\/patreon.com/tomaszkaye). I initiated this project in April 2017. As time goes on material from other contributors may be added.
             This project was supported by crowdfunding. Donations from these people were particularly helpful:
-            Peter Rhodes
-            \[Jason Dreyzehner\](https:\/\/twitter.com/bitjson)
-            Jarrod Pirtle
-            Andy Bolton
+            Peter Rhodes&br&\[Jason Dreyzehner\](https:\/\/twitter.com/bitjson)&br&Jarrod Pirtle&br&Andy Bolton
             ->metaopts
         ** Isn't this biased towards libertarianism? # b
             ---(biased)
@@ -45,7 +45,8 @@
 What do you think theft means?
 
 * Theft is taking something without the owner's consent, intending not to give it back.[%%%whatdoestheftmean.taking] # b
-    Yes, I agree. Here's another question about property to make sure our intuitions are the same before we go on. # s
+    Yes, I agree. Here's another question about property to make sure our intuitions are the same before we go on.
+    ![palm tree](images/palmtree.png) # s
     Imagine you get stranded on a remote island. No one else is there. You gather a supply of food and store it under a shelter that you built. Later on, another person arrives on the island. Do you consider yourself the owner of the food you have gathered?
         ** Yes, I feel as though the food I stored is my property. # b
         ** No. Ownership is a fiction. The reality is that the strong take and defend whatever they can. # b
@@ -55,6 +56,7 @@ What do you think theft means?
             -> nocommonground ->
             ->whatdoestheftmean
 * Theft is whatever the law defines it to be[%%%whatdoestheftmean.legalistic] # b
+    ![sea](images/sea.png)
     Okay. Imagine you are stranded with a small group on a desert island outside the jurisdiction of any state. Without your permission one of the others takes the food you had gathered and stored. I would call that theft. Wouldn't you?
         ** No. Theft can only be a legal concept. It's meaningless without the state. # b
         -> nocommonground ->
@@ -62,7 +64,7 @@ What do you think theft means?
         ** Yes. I would call that theft. # b
 - Good. It looks like we agree so far that property and theft are concepts that make sense even without a state or legal system.
 Extortion is a form of theft in which the thief uses the threat of force to take the victim's property. Libertarians believe taxation is theft, and more specifically extortion.
-* [\[ More… \]]
+![bars](images/bars.png)
 Here's \[Micheal Huemer explaining how libertarians see taxation\](https:\/\/www.libertarianism.org/columns/is-taxation-theft).
 > When the government “taxes” citizens, what this means is that the government demands money from each citizen, under a threat of force: if you do not pay, armed agents hired by the government will take you away and lock you in a cage. This looks like about as clear a case as any of taking people’s property without consent.
 -
@@ -70,7 +72,7 @@ Here's \[Micheal Huemer explaining how libertarians see taxation\](https:\/\/www
 - ->what_mistake 
 ===what_mistake===
 - (wmopts)
-{wmloop > 5: ->break}
+{wmloop > 4: ->break}
 {So with the phrase 'Taxation is theft', what's the most important mistake you think libertarians are making?|Is there some other mistake you think libertarians make when they say that taxation is theft?}
 * {wmloop > 0 } {start.libertarian} I've finished pretending, taxation _is_ theft! # b
         ->ending
@@ -88,6 +90,7 @@ Here's \[Micheal Huemer explaining how libertarians see taxation\](https:\/\/www
         ** Yes, alright, but it seems like an important thing to keep in mind. # b
 * Without taxation how could we fund the public goods that society needs?[%%%what_mistake.funding] # b
     There are some great books and videos online about how important goods and services could be provided without a government. \[Here's one list with a lot of links that you might find useful\](https:\/\/www.reddit.com/r/Anarcho_Capitalism/comments/zbujt/anyone_got_the_full_set_of_intro_to_liberty/c63ad2x/).
+    ![coins](images/city.png)
     But even if life without taxation would mean that we'd have to do without all the services currently provided by the state, this wouldn't help to answer the question of whether or not taxation is theft. It could be the case that taxation is theft _and_ we'd be worse off without it.
 * {wmloop > 0 } {not start.libertarian} {CHOICE_COUNT() > 0} Okay, I understand why libertarians say that taxation is theft.[%%%what_mistake.iunderstand] # b
         -> views_changed
@@ -100,15 +103,18 @@ Here's \[Micheal Huemer explaining how libertarians see taxation\](https:\/\/www
 === views_changed ===
 Have your own views on the claim that taxation is theft changed at all?
         ** {not start.skeptic} No, I still disagree that taxation is theft.[%%%views_changed.no] # b
+            ![thumb down](images/thumbdown.png)
+
             ->ending
         ** I don't know. I need more time to think about it.[%%%views_changed.dontknow] # b
             Of course.
+        ![reading](images/reading.png)
         If you'd like to investigate further \[here's a page with links to resources that you might find useful or interesting.\](links.php).
             ->ending
         ** Yes, I'm convinced that taxation _is_ theft.[%%%views_changed.yes] # b
             That's great to hear! I'm glad to have helped you develop your ideas on the subject.
+            ![reading](images/reading.png)
             If you'd like to investigate further \[here's a page with links to resources that you might find useful or interesting.\](links.php).
-            If you feel like it, it'd be a big help for me if you could copy and paste the entire text on this page and email it to \[Tomasz at info@redshiftmedia.com\](mailto:info@redshiftmedia.com?Subject=Explore%20-%20Is%20taxation%20theft.%20Playthrough.). That way I can get a better insight into what arguments people find most important, and adjust the script to prioritise the most important parts.
             ->ending
            
 === nocommonground ===
@@ -124,8 +130,10 @@ We might be at a dead end. If you really feel that way we don't share enough com
 	{How has this agreement been established?|Is there any other reason to suppose that citizens willingly pay taxes?} # count:{agreementloop}
 	* Most of us pay taxes willingly. If something is given willingly, it can't be theft.[%%%agreement_q.willingly] # b
         It's hard to know how many willingly pay taxes because the government enforces unpleasant penalties on those who don't cooperate, ultimately including violence or imprisonment.
+        ![donations](images/donations.png)
     	Perhaps you would voluntarily pay even if you knew you could safely refuse. Let's imagine that many people felt the same way, and that for this majority the threats of violence the government maintains were redundant. Even so, many _others_ would not pay under those circumstances. At least by this group of people the funds are not given willingly.
     * Citizens democratically elect political representatives who run tax programs.[%%%agreement_q.elected] # b
+        ![ballots](images/ballots.png)
         There are a few problems here. Voting for a political party is not the same as consenting to the rules that party imposes once in power. For instance a vote may be cast as a defensive move to try to prevent the 'greater evil' from gaining power. Even the winners of voting contests do not have the endorsement of the entire population - most often the population who voted for the winner is a minority.
         ** [\[ More… \]]
         So the idea that 'the people' elect the ones who end up in power obscures the reality that at very best, a numerical majority voted for them. Libertarians believe that the results of elections cannot establish that the citizens have agreed to be taxed - since even in the best case some minority do not agree.
@@ -136,6 +144,7 @@ We might be at a dead end. If you really feel that way we don't share enough com
         A popular revolt might be good evidence of the _illegitimacy_ of government, but the lack of such a revolt can't establish the _legitimacy_ of the government.
         Although a joint effort by a large part of the population may be enough to topple a government, such an undertaking is risky, especially in light of what we've learned about the surveillance practices of modern states. Unless many people revolt spontaneously and simultaneously, the few who try to _initiate_ such a change can expect to be targeted and to experience unpleasant treatment at the hands of the state.
         ** [\[ More… \]]
+        ![aeroplane](images/plane.png)
         Here's an analogy. Even though none of the hostages on the aeroplane is trying to overpower the gunman, that isn't enough to conclude they're all comfortable with the situation. The people wanting to change the balance of power are worried about what may happen to them if they attempt to assert their will unsuccessfully.
         Another problem is that opinions about the legitimacy of government differ among the citizens. The number of people who oppose the government may be too small to overthrow it even if they did all act together. In this case the risks of attempting revolution are much greater. Reluctance to endanger yourself in a risky rebellion isn't the same as consent to being ruled.
     + { agreement_q.agreementloop > 0 } {CHOICE_COUNT() > 0}Okay, I accept that not everyone agrees to taxation. ->break # b
@@ -147,6 +156,7 @@ We might be at a dead end. If you really feel that way we don't share enough com
 === state_doesnt_own_land ===
 On a libertarian view the state is not the owner of the land. Libertarians believe that you can come to be the owner of a thing either by being the first to put it to use (\[homesteading\](https:\/\/en.wikipedia.org/wiki/Homestead_principle) or original appropriation of an unowned thing) or voluntary transfer from a previous owner.
 * [\[ More… \]]
+![M16](images/m16.png)
 The state's control of the land depends on conquest and threats of force. It's claim is not grounded in a chain of voluntary transfers and original homesteading. So on this view the state cannot be the legitimate owner of the land.
     ++ I see.[%%%state_doesnt_own_land.isee] # b // TODO: skip this if its the olny option 
     ** But many people live on land that was taken by force from someone. Does that mean libertarians think that land can't be owned now?[%%%state_doesnt_own_land.butmany] # b
@@ -156,9 +166,11 @@ The state's control of the land depends on conquest and threats of force. It's c
     - ->->
 
 === services ===
+![coins](images/coins.png)
 The state does provide services that many people value and are happy to have carried out. But libertarians object that, unlike a normal purchase, these services were never requested. And not everyone who is made to pay for the services wanted the state to carry them out.
 * [\[ More… \]] ->pos
 -(pos)
+![bomb](images/bomb.png)
 As well as services that most feel positively about, the state also carries out tax-funded operations that are much less popular, and very expensive. Like participating in the bombing of citizens in foreign countries. Not only is this activity unrequested by most, it's an activity that _a great many oppose_ and yet are compelled to pay for all the same.
 * [\[ More… \]] ->condemn
 -(condemn)
@@ -166,9 +178,8 @@ We would condemn a private business if it operated this way - imposing unwanted 
 - ->->
 
 === ending === 	
--(end) Thanks for taking a look at this resource. It's a work-in-progress.
-If you have any general feedback you'd like to share, feel free to send it to Tomasz at \[info@redshiftmedia.com\](mailto:info@redshiftmedia.com?Subject=Simulated%20libertarian%20%3A%20Is%20taxation%20theft%3F%20Feedback).
-Consider sharing this page on social media if you thought it was interesting or useful.
+-(end) Thanks for taking a look at this resource. If you have any feedback it'd be great if you could \[fill in this tiny survey\](https:\/\/bitbutter.typeform.com/to/sMIAWC).
 You can support Tomasz's work at \[patreon.com/tomaszkaye\](http:\/\/patreon.com/tomaszkaye).
+[![patreon](images/patreonlink.png)](http:\/\/patreon.com/tomaszkaye)
 \[This script is on GitHub\](https:\/\/github.com/bitbutter/ExploreIsTaxationTheft). Pull requests are welcome!
 -> END

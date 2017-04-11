@@ -3,11 +3,40 @@
 var story;
 var saved;
 var saves = [];
-
+var targetY=0;
+var lastChoiceOffset;
+var clicks=0;
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
 String.prototype.replaceAll = function(search, replacement) {
     var target = this;
     return target.split(search).join(replacement);
 };
+
+// preload images
+$( document ).ready(function() {
+	$('<img src="images/city.png"/>');
+	$('<img src="images/thumbdown.png"/>');
+	$('<img src="images/reading.png"/>');
+	$('<img src="images/bars.png"/>');
+	$('<img src="images/donations.png"/>');
+	$('<img src="images/manwoman.png"/>');
+	$('<img src="images/plane.png"/>');
+	$('<img src="images/patreonlink.png"/>');
+	$('<img src="images/sea.png"/>');
+	$('<img src="images/womanandquestionmark.png"/>');
+	$('<img src="images/bomb.png"/>');
+	$('<img src="images/fish.png"/>');
+	$('<img src="images/coins.png"/>');
+	$('<img src="images/vote.png"/>');
+	$('<img src="images/m16.png"/>');
+	$('<img src="images/ballots.png"/>');
+	$('<img src="images/palmtree.png"/>');
+	$(".title").addClass("show");
+});
+
+
 
 (function(storyContent) {
 
@@ -18,22 +47,12 @@ String.prototype.replaceAll = function(search, replacement) {
         setTimeout(function() { el.classList.add("show") }, delay);
     }
 
-    function scrollToBottom() {
-        var progress = 0.0;
-        var start = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-        var dist = document.body.scrollHeight - window.innerHeight - start;
-        if( dist < 0 ) return;
+    function scrollDown() {
+    	if(clicks==0){
+	    	return;
+	    }
+      	$('html, body').scrollTo(targetY-20,800,{limit:false});
 
-        var duration = 300 + 300*dist/100;
-        var startTime = null;
-        function step(time) {
-            if( startTime == null ) startTime = time;
-            var t = (time-startTime) / duration;
-            var lerp = 3*t*t - 2*t*t*t;
-            window.scrollTo(0, start + lerp*dist);
-            if( t < 1 ) requestAnimationFrame(step);
-        }
-        requestAnimationFrame(step);
     }
 
     function continueStory() {
@@ -88,6 +107,8 @@ String.prototype.replaceAll = function(search, replacement) {
         }
 
         // Create HTML choices from ink choices
+        choiceCounter=0;
+        var choiceAnchorEl;
         story.currentChoices.forEach(function(choice) {
 
             // Create paragraph with anchor element
@@ -110,38 +131,73 @@ String.prototype.replaceAll = function(search, replacement) {
             }
             storyContainer.appendChild(choiceParagraphElement);
 
-            // Fade choice in after a short delay
-            showAfter(delay, choiceParagraphElement);
-            delay += 200.0;
+            choiceAnchorEl = choiceParagraphElement.querySelectorAll("a")[0];
+
+            if(choiceCounter==0){
+            	$(choiceAnchorEl).addClass("firstChoice");
+            }
 
             // Click on choice
-            var choiceAnchorEl = choiceParagraphElement.querySelectorAll("a")[0];
-            choiceAnchorEl.addEventListener("click", function(event) {
-
-                // Don't follow <a> link
+            $(choiceAnchorEl).click(function(event) {
+            	clicks++;
+            	// store Y position of topmost choice for scrolling tha page
+            	targetY=$(".firstChoice").last().offset().top;
+            	// Don't follow <a> link
                 event.preventDefault();
-
+                if($(this).hasClass("goback")){
+                	console.log("goback clicked");
+                	var el=$("#story").append("<div class=\"priorChoice\"><p>Wait, let's try that last bit again.</p></div>");
+                	$(".priorChoice").last().addClass("show");
+                	story.state.LoadJson(saved);
+                } else{
+                	// Tell the story where to go next
+                	console.log("story.ChooseChoiceIndex("+choice.index+")");
+                	story.ChooseChoiceIndex(choice.index);
+                }
                 // Remove all existing choices
                 var existingChoices = storyContainer.querySelectorAll('p.choice');
                 for(var i=0; i<existingChoices.length; i++) {
                     var c = existingChoices[i];
                     c.parentNode.removeChild(c);
                 }
-                if(choiceAnchorEl.className=="goback"){
-                	story.state.LoadJson(saved);//[saves.length-4]); // todo gives unpredictable results
-                	// saves.splice(saves.length-3, 2);
-                } else{
-                	// Tell the story where to go next
-                	story.ChooseChoiceIndex(choice.index);
-                	// saves[saves.length] = story.state.toJson();
-                }
-
-                // Aaand loop
+                // loop
                 continueStory();
-            });
+			});
+
+            // choiceAnchorEl.addEventListener("click", function(event) {
+            // 	clicks++;
+            // 	targetY=$(".firstChoice").last().offset().top;
+
+            //     // Don't follow <a> link
+            //     event.preventDefault();
+
+            //     // Remove all existing choices
+            //     var existingChoices = storyContainer.querySelectorAll('p.choice');
+            //     for(var i=0; i<existingChoices.length; i++) {
+            //         var c = existingChoices[i];
+            //         c.parentNode.removeChild(c);
+            //     }
+            //     console.log("className of clicked: "+choiceAnchorEl.className);
+            //     if(choiceAnchorEl.className=="goback"){
+            //     	console.log("goback clicked");
+            //     	story.state.LoadJson(saved);// TODO this is getting triggered on 'I do really feel that way.' even though there's no goback class
+            //     } else{
+            //     	// Tell the story where to go next
+            //     	console.log("story.ChooseChoiceIndex("+choice.index+")");
+            //     	story.ChooseChoiceIndex(choice.index);
+            //     }
+            //     // loop
+            //     continueStory();
+            // });
+            choiceCounter++;
+            // Fade choice in after a short delay
+            showAfter(delay, choiceParagraphElement);
+            delay += 200.0;
         });
 
-        scrollToBottom();
+        if(clicks>0){
+        	scrollDown();
+    	}
     }
 
     saves[0] = story.state.toJson();
