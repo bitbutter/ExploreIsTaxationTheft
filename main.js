@@ -120,7 +120,7 @@ $( document ).ready(function() {
 
             if(split.length==2){
             	label = split[1];
-            	if(split[0]=="Wait, let's try that last bit again."){
+            	if(split[0]=="Wait, let me go back and answer that last bit differently."){
             		console.log('wait line detected');
             		choiceParagraphElement.innerHTML = `<a href='#' class="goback" onClick="ga('send', 'event', 'choiceLink', 'click', '`+label+`');">${modified}</a>`;
             	} else{
@@ -146,7 +146,7 @@ $( document ).ready(function() {
                 event.preventDefault();
                 if($(this).hasClass("goback")){
                 	console.log("goback clicked");
-                	var el=$("#story").append("<div class=\"priorChoice\"><p>Wait, let's try that last bit again.</p></div>");
+                	var el=$("#story").append("<div class=\"priorChoice\"><p>Wait, let me go back and answer that last bit differently.</p></div>");
                 	$(".priorChoice").last().addClass("show");
                 	story.state.LoadJson(saved);
                 } else{
