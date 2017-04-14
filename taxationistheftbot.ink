@@ -109,7 +109,8 @@ Here's \[Micheal Huemer explaining how libertarians see taxation\](https:\/\/www
 Have your own views on the claim that taxation is theft changed at all?
         ** {not start.skeptic} No, I still disagree that taxation is theft.[%%%views_changed.no] # b
             ![thumb down](images/thumbdown.png)
-
+            I understand. Thanks for the conversation anyway. If you'd like to investigate how other people have reasoned about this and related topics \[here are some links you might find interesting.\](links.php).
+            ->ending
             ->ending
         ** Maybe. I need more time to think about it.[%%%views_changed.dontknow] # b
             Of course.
