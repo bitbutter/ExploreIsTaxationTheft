@@ -109,7 +109,7 @@ Here's \[Micheal Huemer explaining how libertarians see taxation\](https:\/\/www
 Have your own views on the claim that taxation is theft changed at all?
         ** {not start.skeptic} No, I still disagree that taxation is theft.[%%%views_changed.no] # b
             ![thumb down](images/thumbdown.png)
-            I understand. Thanks for the conversation anyway. If you'd like to investigate how other people have reasoned about this and related topics \[here are some links you might find interesting.\](links.php).
+            I understand. Thanks for the conversation anyway. If you'd like to investigate how other people have reasoned about this and related topics \[here are some links you might find interesting\](links.php).
             ->ending
             ->ending
         ** Maybe. I need more time to think about it.[%%%views_changed.dontknow] # b
@@ -215,7 +215,7 @@ Altogether I think this field strongly points to the existence of property, and 
     ->nocommonground
 
 === ending === 	
--(end) Thanks for taking a look at this resource. If you have any feedback it'd be great if you could \[fill in this tiny survey\](https:\/\/bitbutter.typeform.com/to/sMIAWC).
-You can support Tomasz's work at \[patreon.com/tomaszkaye\](http:\/\/patreon.com/tomaszkaye).
-[![patreon](images/patreonlink.png)](http:\/\/patreon.com/tomaszkaye)
+-(end) Thanks for taking a look at this resource. Below is a short survey about your experience. If you like, you can support my work at \[patreon.com/tomaszkaye\](http:\/\/patreon.com/tomaszkaye).
+Here's a short survey about your experience. # survey
+
 -> END

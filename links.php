@@ -51,6 +51,7 @@
 <li><a target="_blank" href="https://liberty.me/
 ">Liberty.me</a></li>
 </ul>
+<div class="typeform-widget show" data-url="https://bitbutter.typeform.com/to/sMIAWC" data-transparency="100" data-hide-headers=true data-hide-footer=true style="width: 650px; height: 500px;"></div><script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id="typef_orm",b="https://s3-eu-west-1.amazonaws.com/share.typeform.com/";if(!gi.call(d,id)){js=ce.call(d,"script");js.id=id;js.src=b+"widget.js";q=gt.call(d,"script")[0];q.parentNode.insertBefore(js,q)}})()</script>
     <?php include_once("analyticstracking.php") ?>
     </div>
 </body>

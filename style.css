@@ -36,12 +36,19 @@ p, a {
     font-size: 13pt;
 }
 
-#story div {
+#story #survey div {
+    opacity: 1.0;
+}
+#story #survey p {
+    opacity: 1.0;
+}
+
+#story div.fadein {
     opacity: 0.0;
     transition: opacity 1.0s;
 }
 
-#story div.show {
+#story div.fadein.show {
     opacity: 1.0;
 }
 
