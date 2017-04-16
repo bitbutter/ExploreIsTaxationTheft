@@ -38,14 +38,13 @@
         **  ->backtosim
         --(backtosim) Back to the conversation. 
         -> start
--
 ->whatdoestheftmean
 
 ===whatdoestheftmean===
-
+-(wttm) # s
 What do you think theft means?
 
-* Theft is taking something without the owner's consent, intending not to give it back.[%%%whatdoestheftmean.taking] # b
+* Theft is taking something without the owner's consent.[%%%whatdoestheftmean.taking] # b
     Yes, I agree. Here's another question about property to make sure our intuitions are the same before we go on.
     ![palm tree](images/palmtree.png) # s
     Imagine you get stranded on a remote island. No one else is there. You gather a supply of food and store it under a shelter that you built. Later on, another person arrives on the island. Do you consider yourself the owner of the food you have gathered?
@@ -67,6 +66,27 @@ What do you think theft means?
         ** No. Theft can only be a legal concept. It's meaningless without a legal authority like the state. # b
         -> surfers
         ** Yes. I would call that theft. # b
+* Theft is an _unjustified_ taking of something from someone else
+    I see. Which of the following is the government activity you disapprove of most strongly?
+    ** Bombing citizens of foreign countries. # b
+        ---(disbomb)
+    ** Corporate subsidies. # b
+        ---(discorp)
+    ** Secret mass surveillance. # b
+        ---(dissurveil)
+    --Would you agree that at least the portion of taxation used to fund that activity is an example of _unjustified_ taking?
+    ** Yes, okay. # b
+        That implies that you believe taxation is partly justified taking, and partly theft. Is that right?
+        *** Wait, let me go back and answer that last bit differently.[%%%.redo] # b
+        *** Yes.
+            ---(taxationpartlytheft)I see. Would you like to go further and hear the case for why some people believe that the _entirity_ of taxation is theft?
+            **** No thanks. # b
+            -> views_changed
+            **** Yes, go on. # b
+            Okay, from now on assume that we're just talking about the portion of taxation used to fund the programs you support.
+            ->what_mistake
+    ** No. # b
+    -> nocommonground
 - Good. It looks like we agree so far that property and theft are concepts that are meaningful even without a state or legal system.
 Extortion is a form of theft in which the thief uses the threat of force to take the victim's property. Libertarians believe taxation is theft, and more specifically extortion.
 ![bars](images/bars.png)
@@ -106,6 +126,7 @@ Here's \[Micheal Huemer explaining how libertarians see taxation\](https:\/\/www
 -> views_changed
 
 === views_changed ===
+{start.libertarian} -> ending
 Have your own views on the claim that taxation is theft changed at all?
         ** {not start.skeptic} No, I still disagree that taxation is theft.[%%%views_changed.no] # b
             ![thumb down](images/thumbdown.png)
