@@ -5,15 +5,13 @@
 * (statist) I disagree with it.[%%%start.statist] # b
     ![man and woman arguing](images/manwoman.png)
     Great! I'm a bot made especially for people who disagree that taxation is theft. I'll be answering from a libertarian perspective.
+    ->timetocomplete->
     Even if you don't end up changing your mind, this simulated conversation might be useful for increasing clarity about your own political views. # s
-        ->whatdoestheftmean
 * (skeptic) I'm not sure, I want to know more.[%%%start.skeptic] # b
     ![woman and question mark](images/womanandquestionmark.png)
-    I understand. To get the most out of this choose the responses you think cause the biggest difficulty for someone claiming that taxation is theft. I'll be answering from a libertarian perspective. # s
-        ->whatdoestheftmean
+    I understand. To get the most out of this choose the responses you think cause the biggest difficulty for someone claiming that taxation is theft. I'll be answering from a libertarian perspective. ->timetocomplete-> # s
 * (libertarian) Yes, I agree with it.[%%%start.libertarian] # b
     Great! You can use this page anyway but you'll have to pretend you _disagree_. # s
-        ->whatdoestheftmean
 * Hold on, what is this thing?[%%%start.whatisthis] # b
     This is a simulated conversation. The aim is to present the main arguments that people make for and against the claim that taxation is theft.
     Online exchanges between real people on this subject are often clouded by impatience and animosity. This resource is offered as a way to explore the disagreement without any put-downs or name-calling.
@@ -38,10 +36,11 @@
         **  ->backtosim
         --(backtosim) Back to the conversation. 
         -> start
+-
 ->whatdoestheftmean
 
 ===whatdoestheftmean===
--(wttm) # s
+-(wttm)
 What do you think theft means?
 
 * Theft is taking something without the owner's consent.[%%%whatdoestheftmean.taking] # b
@@ -66,26 +65,26 @@ What do you think theft means?
         ** No. Theft can only be a legal concept. It's meaningless without a legal authority like the state. # b
         -> surfers
         ** Yes. I would call that theft. # b
-* Theft is an _unjustified_ taking of something from someone else
+* Theft is an _unjustified_ taking of something from someone else[%%%whatdoestheftmean.unjustifiedtaking] # b
     I see. Which of the following is the government activity you disapprove of most strongly?
-    ** Bombing citizens of foreign countries. # b
+    ** Bombing citizens of foreign countries.[%%%mostdisapproveof.bombing] # b
         ---(disbomb)
-    ** Corporate subsidies. # b
+    ** Corporate subsidies.[%%%mostdisapproveof.corporatesubsidies] # b
         ---(discorp)
-    ** Secret mass surveillance. # b
+    ** Secret mass surveillance.[%%%mostdisapproveof.surveillance] # b
         ---(dissurveil)
-    --Would you agree that at least the portion of taxation used to fund that activity is an example of _unjustified_ taking?
-    ** Yes, okay. # b
+    --Would you agree that at least the portion of taxation used to {disbomb:fund the bombing}{discorp: subsidise large corporations}{dissurveil:fund secret mass surveillance} is an example of _unjustified_ taking?
+    ** Yes, okay.[%%%taxationispartlyunjustified.agree] # b
         That implies that you believe taxation is partly justified taking, and partly theft. Is that right?
-        *** Wait, let me go back and answer that last bit differently.[%%%.redo] # b
-        *** Yes.
-            ---(taxationpartlytheft)I see. Would you like to go further and hear the case for why some people believe that the _entirity_ of taxation is theft?
-            **** No thanks. # b
+        *** Wait, let me go back and answer that last bit differently.[%%%taxationispartlytheft.redo] # b
+        *** Yes.[%%%taxationispartlytheft.agree] # b
+            ---(taxationpartlytheft)That makes sense. Would you like to hear why some people believe that the _entirety_ of taxation is theft?
+            **** No thanks.[%%%hearcaseforentiretyoftaxationistheft.no] # b
             -> views_changed
-            **** Yes, go on. # b
-            Okay, from now on assume that we're just talking about the portion of taxation used to fund the programs you support.
+            **** Yes, go on.[%%%hearcaseforentiretyoftaxationistheft.yes] # b
+            Okay, from now on assume that we're talking only about taxation used to fund the programs you support.
             ->what_mistake
-    ** No. # b
+    ** No.[%%%taxationispartlyunjustified.disagree] # b
     -> nocommonground
 - Good. It looks like we agree so far that property and theft are concepts that are meaningful even without a state or legal system.
 Extortion is a form of theft in which the thief uses the threat of force to take the victim's property. Libertarians believe taxation is theft, and more specifically extortion.
@@ -101,6 +100,14 @@ Here's \[Micheal Huemer explaining how libertarians see taxation\](https:\/\/www
 {So with the phrase 'Taxation is theft', what's the most important mistake you think libertarians are making?|Is there some other mistake you think libertarians make when they say that taxation is theft?}
 * {wmloop > 0 } {start.libertarian} I've finished pretending, taxation _is_ theft! # b
         ->ending
+* {whatdoestheftmean.taxationpartlytheft} Without the programs I support, society would be worse off. So taxation to support those things is justified - not theft. # b
+    Imagine taking your neighbour's computer without his permission, selling it, and donating the proceeds to the most effective charity organisation you could find. Your neighbour would be upset and inconvenienced. But imagine that the proceeds ended up enabling someone's life to be saved. Perhaps society could be described as being better off if you did this. Would that mean taking the computer wasn't theft?
+        ** No, okay. An act of taking can make society better off and still be theft. # b
+        ** If would still be theft in my view. The taking in this case would be unjustified because it was unpredictable (the wealth transfer that the state carries out follows predictable rules). Unpredictable taking erodes the confidence we can place in social norms, which makes us all worse off. # b
+            Do you believe that the destabilising effect that would come from this one act of taking would be a worse outcome than the premature loss of a life?
+            *** Yes.
+            It sounds like you see the state, or at least the ideal state, as an entity that makes us all better off by helping to solve coordination problems in society. Unfortunately that's too big of a topic to get into here, but I hope to explore that in a future publication. ->views_changed
+            *** No, okay. An act of taking can make society better off and still be theft.
 * The citizens have agreed to be taxed.[%%%what_mistake.agreed] # b
     -> agreement_q ->
 * Taxation isn't theft, it's a fee for all the services that government provides.[%%%what_mistake.fee] # b
@@ -118,7 +125,7 @@ Here's \[Micheal Huemer explaining how libertarians see taxation\](https:\/\/www
     ![coins](images/city.png)
     But even if life without taxation would mean that we'd have to do without all the services currently provided by the state, this wouldn't help to answer the question of whether or not taxation is theft. It could be the case that taxation is theft _and_ we'd be worse off without it.
 * {wmloop > 0 } {not start.libertarian} {CHOICE_COUNT() > 0} Okay, I understand why libertarians say that taxation is theft.[%%%what_mistake.iunderstand] # b
-        -> views_changed
+    -> views_changed
 * -> views_changed
 -(wmloop)
 ->wmopts
@@ -126,12 +133,11 @@ Here's \[Micheal Huemer explaining how libertarians see taxation\](https:\/\/www
 -> views_changed
 
 === views_changed ===
-{start.libertarian} -> ending
+{start.libertarian: -> ending}
 Have your own views on the claim that taxation is theft changed at all?
         ** {not start.skeptic} No, I still disagree that taxation is theft.[%%%views_changed.no] # b
             ![thumb down](images/thumbdown.png)
             I understand. Thanks for the conversation anyway. If you'd like to investigate how other people have reasoned about this and related topics \[here are some links you might find interesting\](links.php).
-            ->ending
             ->ending
         ** Maybe. I need more time to think about it.[%%%views_changed.dontknow] # b
             Of course.
@@ -199,8 +205,10 @@ The state's control of the land depends on conquest and threats of force. Its cl
 === services ===
 ![coins](images/coins.png)
 The state does provide services that many people value and are happy to have carried out. But libertarians object that, unlike a normal purchase, these services were never requested. And not everyone who is made to pay for the services wanted the state to carry them out.
+
 * [\[ Continue… \]] ->pos
 -(pos)
+{whatdoestheftmean.taxationpartlytheft: ->condemn}
 ![bomb](images/bomb.png)
 As well as services that most feel positively about, the state also carries out tax-funded operations that are much less popular, and very expensive. Like participating in the bombing of citizens in foreign countries. Not only is this activity unrequested by most, it's an activity that _a great many oppose_ and yet are compelled to pay for all the same.
 * [\[ Continue… \]] ->condemn
@@ -225,7 +233,7 @@ According to these accounts it's possible to be the owner of a wave, or to steal
     ->nocommonground
     
 ===propertyinstinct===
-Yes there are. There's evidence from the field of evolutionary biology pointing  to the existence of a property ‘instinct’ in several species. The attitudes of these animals resemble \[Lockean property rights\](https:\/\/en.wikipedia.org/wiki/Homestead_principle) among humans. The appearance of these attitudes can be explained in terms of evolutionary game theory. This suggests that the treatment of property in human legal systems is partly a codification of intuitions we’ve inherited from our ancestral past.
+Yes there are. There's evidence from the field of evolutionary biology pointing  to the existence of a property ‘instinct’ in several species. The attitudes of these animals resemble \[Lockean property rights\](https:\/\/en.wikipedia.org/wiki/Homestead_principle) among humans. The appearance of these attitudes can be explained in terms of evolutionary game theory. This suggests that the treatment of property in human legal systems is partly a codification of instincts we’ve inherited from our ancestral past.
 \[The property ‘instinct’ (PDF)\](https:\/\/www.ncbi.nlm.nih.gov/pmc/articles/PMC1693451/pdf/15590617.pdf) is a fascinating paper by Jeffrey Evans Stake that goes into the evidence in some detail.
 You might also be interested in David Friedman's article entitled \[A Positive Account of Property Rights\](http:\/\/www.daviddfriedman.com/Academic/Property/Property.html). He gives a theoretical account of how the institution of property could emerge from a population of social animals, with conflict avoidance and \[Schelling points\](http:\/\/lesswrong.com/lw/ase/schelling_fences_on_slippery_slopes/) as the bootstrapping mechanism. Again without recourse to any institution of law enforcement. # s
 Altogether I think this field strongly points to the existence of property, and thus theft, as patterns of resource use that human brains are evolutionarily predisposed to assign special significance to. On the basis of this evidence it doesn’t seem far-fetched to suppose that property and theft predate legal systems.
@@ -235,8 +243,10 @@ Altogether I think this field strongly points to the existence of property, and 
 * Sorry, I just don’t accept that property can be meaningful without the state. # b
     ->nocommonground
 
-=== ending === 	
--(end) Thanks for taking a look at this resource. Below is a short survey about your experience. If you like, you can support my work at \[patreon.com/tomaszkaye\](http:\/\/patreon.com/tomaszkaye).
+=== timetocomplete ===
+You'll be finished in about five minutes. ->->
+=== ending ===
+Thanks for taking a look at this resource. Below is a short survey about your experience. If you like, you can support my work at \[patreon.com/tomaszkaye\](http:\/\/patreon.com/tomaszkaye).
 Here's a short survey about your experience. # survey
 
 -> END

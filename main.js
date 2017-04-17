@@ -6,6 +6,8 @@ var saves = [];
 var targetY=0;
 var lastChoiceOffset;
 var clicks=0;
+var sendAnalyticsEvents = true;
+
 if ('scrollRestoration' in history) {
   history.scrollRestoration = 'manual';
 }
@@ -36,6 +38,18 @@ $( document ).ready(function() {
 	$(".title").addClass("show");
 });
 
+function GetAnalticsOnClickString(label){
+	s=""
+	if (sendAnalyticsEvents){
+		s=`onClick="ga('send', 'event', 'choiceLink', 'click', '${label}');"`;
+	} else {
+		s="";
+	}
+	if(label == 'start.libertarian'){
+		sendAnalyticsEvents=false;
+	}
+	return s;
+}
 
 
 (function(storyContent) {
@@ -132,9 +146,9 @@ $( document ).ready(function() {
             	label = split[1];
             	if(split[0]=="Wait, let me go back and answer that last bit differently."){
             		console.log('wait line detected');
-            		choiceParagraphElement.innerHTML = `<a href='#' class="goback" onClick="ga('send', 'event', 'choiceLink', 'click', '`+label+`');">${modified}</a>`;
+            		choiceParagraphElement.innerHTML = `<a href='#' class=\"goback\" ${GetAnalticsOnClickString(label)}>${modified}</a>`;
             	} else{
-					choiceParagraphElement.innerHTML = `<a href='#' onClick="ga('send', 'event', 'choiceLink', 'click', '`+label+`');">${modified}</a>`;
+					choiceParagraphElement.innerHTML = `<a href='#' ${GetAnalticsOnClickString(label)}>${modified}</a>`;
             	}
             } else {
             	choiceParagraphElement.innerHTML = `<a href='#'>${modified}</a>`;
