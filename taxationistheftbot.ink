@@ -10,8 +10,8 @@
 * (skeptic) I'm not sure, I want to know more.[%%%start.skeptic] # b
     ![woman and question mark](images/womanandquestionmark.png)
     I understand. To get the most out of this choose the responses you think cause the biggest difficulty for someone claiming that taxation is theft. I'll be answering from a libertarian perspective. ->timetocomplete-> # s
-* (libertarian) Yes, I agree with it.[%%%start.libertarian] # b
-    Great! You can use this page anyway but you'll have to pretend you _disagree_. # s
+* (libertarian) Yes, I agree. But I want to see how this site argues for that claim.[%%%start.libertarian] # b
+    Great! Just pretend you disagree that taxation is theft from now on. # s
 * Hold on, what is this thing?[%%%start.whatisthis] # b
     This is a simulated conversation. The aim is to present the main arguments that people make for and against the claim that taxation is theft.
     Online exchanges between real people on this subject are often clouded by impatience and animosity. This resource is offered as a way to explore the disagreement without any put-downs or name-calling.
@@ -59,13 +59,13 @@ What do you think theft means?
         ** No. I'm not the owner because ownership can only be a legal concept. It's meaningless without a legal authority like the state.[%%%remoteisland.ownershiplegalistic] # b
             -> surfers ->
             ->whatdoestheftmean
-* Theft is whatever the law defines it to be[%%%whatdoestheftmean.legalistic] # b
+* Theft is whatever the law defines it to be.[%%%whatdoestheftmean.legalistic] # b
     ![sea](images/sea.png)
     Okay. Imagine you are stranded with a small group on a desert island outside the jurisdiction of any state. Without your permission one of the others takes the food you had gathered and stored. I would call that theft. Wouldn't you?
         ** No. Theft can only be a legal concept. It's meaningless without a legal authority like the state. # b
         -> surfers
         ** Yes. I would call that theft. # b
-* Theft is an _unjustified_ taking of something from someone else[%%%whatdoestheftmean.unjustifiedtaking] # b
+* Theft is an _unjustified_ taking of something from someone else.[%%%whatdoestheftmean.unjustifiedtaking] # b
     I see. Which of the following is the government activity you disapprove of most strongly?
     ** Bombing citizens of foreign countries.[%%%mostdisapproveof.bombing] # b
         ---(disbomb)
