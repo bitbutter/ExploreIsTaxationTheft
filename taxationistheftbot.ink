@@ -10,7 +10,7 @@
 * (skeptic) I'm not sure, I want to know more.[%%%start.skeptic] # b
     ![woman and question mark](images/womanandquestionmark.png)
     I understand. To get the most out of this choose the responses you think cause the biggest difficulty for someone claiming that taxation is theft. I'll be answering from a libertarian perspective. ->timetocomplete-> # s
-* (libertarian) Yes, I agree. But I want to see how this site argues for that claim.[%%%start.libertarian] # b
+* (libertarian) I agree! But I want to pretend that I don't, to see what responses this site gives.[%%%start.libertarian] # b
     Great! Just pretend you disagree that taxation is theft from now on. # s
 * Hold on, what is this thing?[%%%start.whatisthis] # b
     This is a simulated conversation. The aim is to present the main arguments that people make for and against the claim that taxation is theft.
@@ -98,7 +98,7 @@ Here's \[Micheal Huemer explaining how libertarians see taxation\](https:\/\/www
 - (wmopts)
 {wmloop > 4: ->break}
 {So with the phrase 'Taxation is theft', what's the most important mistake you think libertarians are making?|Is there some other mistake you think libertarians make when they say that taxation is theft?}
-* {wmloop > 0 } {start.libertarian} I've finished pretending, taxation _is_ theft! # b
+* (stoppedpretending){wmloop > 0 } {start.libertarian} I've finished pretending, taxation _is_ theft! # b
         ->ending
 * {whatdoestheftmean.taxationpartlytheft} Without the programs I support, society would be worse off. So taxation to support those things is justified - not theft. # b
     Imagine taking your neighbour's computer without his permission, selling it, and donating the proceeds to the most effective charity organisation you could find. Your neighbour would be upset and inconvenienced. But imagine that the proceeds ended up enabling someone's life to be saved. Perhaps society could be described as being better off if you did this. Would that mean taking the computer wasn't theft?
@@ -133,9 +133,8 @@ Here's \[Micheal Huemer explaining how libertarians see taxation\](https:\/\/www
 -> views_changed
 
 === views_changed ===
-{start.libertarian: -> ending}
 Have your own views on the claim that taxation is theft changed at all?
-        ** {not start.skeptic} No, I still disagree that taxation is theft.[%%%views_changed.no] # b
+        ** I (still) disagree that taxation is theft.[%%%views_changed.no] # b
             ![thumb down](images/thumbdown.png)
             I understand. Thanks for the conversation anyway. If you'd like to investigate how other people have reasoned about this and related topics \[here are some links you might find interesting\](links.php).
             ->ending
@@ -144,7 +143,13 @@ Have your own views on the claim that taxation is theft changed at all?
         ![reading](images/reading.png)
         If you'd like to investigate further \[here's a page with links to resources that you might find useful or interesting\](links.php).
             ->ending
-        ** Yes, I'm convinced that taxation _is_ theft.[%%%views_changed.yes] # b
+        **  I agree that taxation is theft. But taxation has features that make it very different from typical examples of theft. I think these differences make taxation permissible generally, unlike theft committed by nongovernmental actors.[%%%views_changed.taxpermissable] # b
+            I'm glad we agree that taxation is theft. I agree with you that this, on it's own, isn't sufficient reason to reject taxation as illegitimate. That would be committing the \[noncentral fallacy\](http:\/\/lesswrong.com/lw/e95/the_noncentral_fallacy_the_worst_argument_in_the/). You're right that the theft of taxation has many characteristics that make it different from most examples of private theft.
+            For me though, the differences don't redeem it. I hope to go into detail about this in a future _Explore_ publication. If you like, you could \[email me\](mailto:info@redshiftmedia.com?Subject=Simulated%20libertarian%20%3A%20Is%20taxation%20theft%3F%20Follow%20up%20suggestion) with the most important characteristics of taxation you think put it in a different ethical category to most nongovernmental examples of theft. I'll try to address your view in my follow-up project. \[info@redshiftmedia.com\](mailto:info@redshiftmedia.com?Subject=Simulated%20libertarian%20%3A%20Is%20taxation%20theft%3F%20Follow%20up%20suggestion).
+            ![reading](images/reading.png)
+            Meanwhile, if you'd like to investigate libertarian ideas further \[here's a page with links to some resources\](links.php).
+            ->ending
+        ** Yes, I'm convinced that taxation _is_ theft and I've become less confident that taxation is legitimate.[%%%views_changed.yes] # b
             That's great to hear! I'm glad to have helped you develop your ideas on the subject.
             ![reading](images/reading.png)
             If you'd like to investigate further \[here's a page with links to resources that you might find useful or interesting.\](links.php).
@@ -246,7 +251,10 @@ Altogether I think this field strongly points to the existence of property, and 
 === timetocomplete ===
 You'll be finished in about five minutes. ->->
 === ending ===
-Thanks for taking a look at this resource. Below is a short survey about your experience. If you like, you can support my work at \[patreon.com/tomaszkaye\](http:\/\/patreon.com/tomaszkaye).
+{start.libertarian && not what_mistake.stoppedpretending:_You've reached the end. Please stop pretending you disagree that taxation is theft now!_ }
+Thanks for taking a look at this resource. Below is a short survey about your experience.
 Here's a short survey about your experience. # survey
+If you like, you can support my work via \[Patreon\](http:\/\/patreon.com/tomaszkaye).
+\[![patreon](images/patreonlink.png)\](http:\/\/patreon.com/tomaszkaye)
 
 -> END

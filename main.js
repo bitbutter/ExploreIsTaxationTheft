@@ -18,6 +18,7 @@ String.prototype.replaceAll = function(search, replacement) {
 
 // preload images
 $( document ).ready(function() {
+	$('#staticStory').remove();
 	$('<img src="images/city.png"/>');
 	$('<img src="images/thumbdown.png"/>');
 	$('<img src="images/reading.png"/>');
@@ -35,6 +36,7 @@ $( document ).ready(function() {
 	$('<img src="images/m16.png"/>');
 	$('<img src="images/ballots.png"/>');
 	$('<img src="images/palmtree.png"/>');
+	$('#cover').remove();
 	$(".title").addClass("show");
 });
 
@@ -81,7 +83,11 @@ function GetAnalticsOnClickString(label){
 
         	// survey
             if(story.currentTags.indexOf('survey') > -1){
-				$(".container").first().append('<div class="typeform-widget" data-url="https://bitbutter.typeform.com/to/sMIAWC" data-transparency="100" data-hide-headers=true data-hide-footer=true style="width: 650px; height: 300px;"></div><script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id="typef_orm",b="https://s3-eu-west-1.amazonaws.com/share.typeform.com/";if(!gi.call(d,id)){js=ce.call(d,"script");js.id=id;js.src=b+"widget.js";q=gt.call(d,"script")[0];q.parentNode.insertBefore(js,q)}})()</script>');
+
+            	//$(".container").first().append('<iframe class="form" src="https://docs.google.com/forms/d/e/1FAIpQLSeAXamSp6u4loG3Fsf2wMRvJMaTAGmGHOcawdXkv1cuuBvsiQ/viewform?embedded=true" width="600" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>');
+				//$("iframe.form").last().addClass("show");
+
+				$(".container").first().append('<div class="typeform-widget" data-url="https://bitbutter.typeform.com/to/sMIAWC" data-transparency="100" data-hide-headers=true data-hide-footer=true style="width: 100%; height: 500px;"></div><script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id="typef_orm",b="https://s3-eu-west-1.amazonaws.com/share.typeform.com/";if(!gi.call(d,id)){js=ce.call(d,"script");js.id=id;js.src=b+"widget.js";q=gt.call(d,"script")[0];q.parentNode.insertBefore(js,q)}})()</script>');
 				$(".typeform-widget").last().addClass("show");
             } else {
 
@@ -188,31 +194,6 @@ function GetAnalticsOnClickString(label){
                 continueStory();
 			});
 
-            // choiceAnchorEl.addEventListener("click", function(event) {
-            // 	clicks++;
-            // 	targetY=$(".firstChoice").last().offset().top;
-
-            //     // Don't follow <a> link
-            //     event.preventDefault();
-
-            //     // Remove all existing choices
-            //     var existingChoices = storyContainer.querySelectorAll('p.choice');
-            //     for(var i=0; i<existingChoices.length; i++) {
-            //         var c = existingChoices[i];
-            //         c.parentNode.removeChild(c);
-            //     }
-            //     console.log("className of clicked: "+choiceAnchorEl.className);
-            //     if(choiceAnchorEl.className=="goback"){
-            //     	console.log("goback clicked");
-            //     	story.state.LoadJson(saved);// TODO this is getting triggered on 'I do really feel that way.' even though there's no goback class
-            //     } else{
-            //     	// Tell the story where to go next
-            //     	console.log("story.ChooseChoiceIndex("+choice.index+")");
-            //     	story.ChooseChoiceIndex(choice.index);
-            //     }
-            //     // loop
-            //     continueStory();
-            // });
             choiceCounter++;
             // Fade choice in after a short delay
             showAfter(delay, choiceParagraphElement);
