@@ -86,3 +86,20 @@ font-size: 0.95em;
 }
 
 #cover {position: fixed; height: 100%; width: 100%; top:0; left: 0; background: #fff; z-index:9999;}
+
+form{
+    opacity: 0.0;
+    transition: opacity 1.0s;
+}
+form.show{
+    opacity: 1.0;
+}
+input[type=text] {
+background-color: rgba(244, 138, 152, 0.1);
+padding:6px;
+border-width:3px;
+border-color:rgba(244, 138, 152, 1);
+border-style:solid;
+margin-left: 10px;
+min-width:190px;
+}

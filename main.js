@@ -38,6 +38,63 @@ $( document ).ready(function() {
 	$('<img src="images/palmtree.png"/>');
 	$('#cover').remove();
 	$(".title").addClass("show");
+	// ajax subscribe form
+	$("#signup-form").submit(function(e){
+		e.preventDefault(); 
+		
+		var $form = $(this),
+		email = $form.find('input[name="email"]').val(),
+		url = $form.attr('action');
+		
+		$.post(url, {email:email},
+		  function(data) {
+		      if(data)
+		      {
+		      	if(data=="Some fields are missing.")
+		      	{
+			      	$("#status").text("✖ Please fill in your name and email.");
+			      	$("#status").css("color", "red");
+		      	}
+		      	else if(data=="Invalid email address.")
+		      	{
+			      	$("#status").text("✖ Your email address is invalid.");
+			      	$("#status").css("color", "red");
+		      	}
+		      	else if(data=="Invalid list ID.")
+		      	{
+			      	$("#status").text("✖ Your list ID is invalid.");
+			      	$("#status").css("color", "red");
+		      	}
+		      	else if(data=="Already subscribed.")
+		      	{
+			      	$("#status").text("✔ You're already subscribed!");
+			      	$("#status").css("color", "#2fd1e4");
+			      	$form.find('.inputwrapper').remove();
+		      	}
+		      	else
+		      	{
+			      	$("#status").text("✔ You're subscribed!");
+			      	$("#status").css("color", "#2fd1e4");
+			      	$form.find('.inputwrapper').remove();
+		      	}
+		      }
+		      else
+		      {
+		      	alert("Sorry, unable to subscribe. Please try again later!");
+		      }
+		  }
+		);
+	});
+	$("#signup-form").keypress(function(e) {
+		    if(e.keyCode == 13) {
+		    	e.preventDefault(); 
+				$(this).submit();
+		    }
+		});
+	$("#submit-btn").click(function(e){
+		e.preventDefault(); 
+		$("#signup-form").submit();
+	});
 });
 
 function GetAnalticsOnClickString(label){
@@ -53,7 +110,6 @@ function GetAnalticsOnClickString(label){
 	return s;
 }
 
-
 (function(storyContent) {
 
     story = new inkjs.Story(storyContent);
@@ -62,7 +118,9 @@ function GetAnalticsOnClickString(label){
     function showAfter(delay, el) {
         setTimeout(function() { el.classList.add("show") }, delay);
     }
-
+	function jshowAfter(delay, el) {
+        setTimeout(function() { el.addClass("show")}, delay);
+    }
     function scrollDown() {
     	if(clicks==0){
 	    	return;
@@ -80,13 +138,16 @@ function GetAnalticsOnClickString(label){
         while(story.canContinue) {
         	// Get ink to generate the next paragraph
             var paragraphText = story.Continue();
-
-        	// survey
-            if(story.currentTags.indexOf('survey') > -1){
-
+			// playlist
+            if(story.currentTags.indexOf('playlist') > -1){
+				$(".container").first().append('<iframe width="600" height="338" src="https://www.youtube.com/embed/videoseries?list=PL4jzSARXHuuwhBfzGNYhSVE4gJ8zmRnTH" frameborder="0" allowfullscreen></iframe>');
+            } else if(story.currentTags.indexOf('subscribe') > -1){
+            	$(".container").first().append('<form class="subscribeform" action="signup.php" method="POST" accept-charset="utf-8" name="signup-form" id="signup-form"><span class="inputwrapper"><p><label for="email"/>Your email address</label><input type="text" name="email"/></p></span><p id="status"></p></form>');
+           		jshowAfter(delay, $(".subscribeform").last());
+           		//$(".subscribeform").last().addClass("show");
+            } else if(story.currentTags.indexOf('survey') > -1){
             	//$(".container").first().append('<iframe class="form" src="https://docs.google.com/forms/d/e/1FAIpQLSeAXamSp6u4loG3Fsf2wMRvJMaTAGmGHOcawdXkv1cuuBvsiQ/viewform?embedded=true" width="600" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>');
 				//$("iframe.form").last().addClass("show");
-
 				$(".container").first().append('<div class="typeform-widget" data-url="https://bitbutter.typeform.com/to/sMIAWC" data-transparency="100" data-hide-headers=true data-hide-footer=true style="width: 100%; height: 500px;"></div><script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id="typef_orm",b="https://s3-eu-west-1.amazonaws.com/share.typeform.com/";if(!gi.call(d,id)){js=ce.call(d,"script");js.id=id;js.src=b+"widget.js";q=gt.call(d,"script")[0];q.parentNode.insertBefore(js,q)}})()</script>');
 				$(".typeform-widget").last().addClass("show");
             } else {
