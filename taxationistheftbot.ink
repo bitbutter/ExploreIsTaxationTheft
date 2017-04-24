@@ -104,7 +104,7 @@ Here's \[Micheal Huemer explaining how libertarians see taxation\](https:\/\/www
 * {whatdoestheftmean.taxationpartlytheft} Without the programs I support, society would be worse off. So taxation to support those things is justified - not theft. # b
     Imagine taking your neighbour's computer without his permission, selling it, and donating the proceeds to the most effective charity organisation you could find. Your neighbour would be upset and inconvenienced. But imagine that the proceeds ended up enabling someone's life to be saved. Perhaps society could be described as being better off if you did this. Would that mean taking the computer wasn't theft?
         ** No, okay. An act of taking can make society better off and still be theft. # b
-        ** If would still be theft in my view. The taking in this case would be unjustified because it was unpredictable (the wealth transfer that the state carries out follows predictable rules). Unpredictable taking erodes the confidence we can place in social norms, which makes us all worse off. # b
+        ** It would still be theft in my view. The taking in this case would be unjustified because it was unpredictable (the wealth transfer that the state carries out follows predictable rules). Unpredictable taking erodes the confidence we can place in social norms, which makes us all worse off. # b
             Do you believe that the destabilising effect that would come from this one act of taking would be a worse outcome than the premature loss of a life?
             *** Yes.
             It sounds like you see the state, or at least the ideal state, as an entity that makes us all better off by helping to solve coordination problems in society. Unfortunately that's too big of a topic to get into here, but I hope to explore that in a future publication. ->views_changed
@@ -175,7 +175,7 @@ Okay.
         ** [\[ Continue… \]]
         So the idea that 'the people' elect the ones who end up in power obscures the reality that at very best, a numerical majority voted for them. Libertarians believe that the results of elections cannot establish that the citizens have agreed to be taxed - since even in the best case some minority do not agree.
 	* By living in a country you implicitly agree to abide by the rules of the state, including taxation.[%%%agreement_q.youcanalwaysleave] # b
-	    This reply assumes that the state is the rightful owner of the land. Since, if the state was not the owner, it would have no right to impose conditions on anyone staying on that land. Just like I don't have the right to impose conditions on you if you continue to live in your house.
+	    This reply assumes that the state is the rightful owner of the land. Since, if the state were not the owner, it would have no right to impose conditions on anyone staying on that land. Just like I don't have the right to impose conditions on you if you continue to live in your house.
 	        { state_doesnt_own_land < 1: -> state_doesnt_own_land ->|We talked earlier about the problem with the assumption that the state owns the land.}
     * The citizens have the right to overthrow a government that doesn't represent them. As long as revolution isn't happening, the citizens must consider the government legitimate.[%%%agreement_q.rightofrevolution] # b
         A popular revolt might be good evidence of the _illegitimacy_ of government, but the lack of such a revolt can't establish the _legitimacy_ of the government.
