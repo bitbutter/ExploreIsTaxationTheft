@@ -119,8 +119,8 @@ Here's \[Micheal Huemer explaining how libertarians see taxation\](https:\/\/www
 * Without taxation the government couldn't exist.[%%%what_mistake.govcouldntexist] # b
     Government, as we know it, wouldn't exist without taxation. But this doesn't have any bearing on whether or not taxation is theft.
         ** What do you mean? # b
-            It's logically possible that taxation is theft _and_ we'd all be worse off if there were no taxation. Libertarians generally believe we'd be better off, but we won't go into that here. Right now the focus is on whether or not taxation is theft. 
-        ** Yes, alright, but it seems like an important thing to keep in mind. # b
+            It's logically possible that taxation is theft _and_ we'd all be worse off if there was no taxation. Libertarians generally believe we'd be better off, but we won't go into that here. Right now the focus is on whether or not taxation is theft. 
+        ** Yes, all right, but it seems like an important thing to keep in mind. # b
 * Without taxation how could we fund the public services that society needs?[%%%what_mistake.funding] # b
     Libertarian thinkers have given accounts of how services like \[law\](http:\/\/www.daviddfriedman.com/Academic/Law_as_a_private_good/Law_as_a_private_good.html), \[roads\](https:\/\/mises.org/library/privatization-roads-and-highways), and \[national defense\](https:\/\/attackthesystem.com/national-defense-and-foreign-policy/) could be efficiently provided by private businesses.
     ![coins](images/city.png)
@@ -224,7 +224,7 @@ Nevertheless, I’ll try to explain why accepting a broader relevance of these i
 Did you ever hear about the property rights system that emerged between surfers? Here are a couple of articles. 
 \[Economics, Property Rights and Surfing\](http:\/\/ordinary-gentlemen.com/2012/06/03/economics-property-rights-and-surfing/)&br&\[Property Rights To Surf Breaks\](https:\/\/www.perc.org/articles/property-rights-surf-breaks)
 According to these accounts it's possible to be the owner of a wave, or to steal a wave from another surfer. What’s interesting for our discussion is that these norms aren’t codified or enforced by formal legal agencies yet they are respected among surfers. They are an example of 'bottom-up' spontaneous order.
-* Okay yes. I agree that property and theft can be meaningful in a extra-legal sense. # b
+* Okay yes. I agree that property and theft can be meaningful in an extra-legal sense. # b
     Great!
     ->what_mistake 
 * Interesting. Are there other examples of property norms independent of legal institutions? # b
@@ -237,7 +237,7 @@ Yes there are. There's evidence from the field of evolutionary biology pointing 
 \[The property ‘instinct’ (PDF)\](https:\/\/www.ncbi.nlm.nih.gov/pmc/articles/PMC1693451/pdf/15590617.pdf) is a fascinating paper by Jeffrey Evans Stake that goes into the evidence in some detail.
 You might also be interested in David Friedman's article entitled \[A Positive Account of Property Rights\](http:\/\/www.daviddfriedman.com/Academic/Property/Property.html). He gives a theoretical account of how the institution of property could emerge from a population of social animals, with conflict avoidance and \[Schelling points\](http:\/\/lesswrong.com/lw/ase/schelling_fences_on_slippery_slopes/) as the bootstrapping mechanism. Again without recourse to any institution of law enforcement. # s
 Altogether I think this field strongly points to the existence of property, and thus theft, as patterns of resource use that human brains are evolutionarily predisposed to assign special significance to. On the basis of this evidence it doesn’t seem far-fetched to suppose that property and theft predate legal systems.
-* Alright. Property and theft can be meaningful in a extra-legal sense. # b
+* All right. Property and theft can be meaningful in an extra-legal sense. # b
     Great!
     ->what_mistake 
 * Sorry, I just don’t accept that property can be meaningful without the state. # b
