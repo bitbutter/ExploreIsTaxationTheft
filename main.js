@@ -7,7 +7,8 @@ var targetY=0;
 var lastChoiceOffset;
 var clicks=0;
 var sendAnalyticsEvents = true;
-
+var lastLabelClicked="NONE";
+var storyContainer;
 if ('scrollRestoration' in history) {
   history.scrollRestoration = 'manual';
 }
@@ -38,96 +39,143 @@ $( document ).ready(function() {
 	$('<img src="images/palmtree.png"/>');
 	$('#cover').remove();
 	$(".title").addClass("show");
-	// ajax subscribe form
-	$("#signup-form").submit(function(e){
-		e.preventDefault(); 
-		
-		var $form = $(this),
-		email = $form.find('input[name="email"]').val(),
-		url = $form.attr('action');
-		
-		$.post(url, {email:email},
-		  function(data) {
-		      if(data)
-		      {
-		      	if(data=="Some fields are missing.")
-		      	{
-			      	$("#status").text("✖ Please fill in your name and email.");
-			      	$("#status").css("color", "red");
-		      	}
-		      	else if(data=="Invalid email address.")
-		      	{
-			      	$("#status").text("✖ Your email address is invalid.");
-			      	$("#status").css("color", "red");
-		      	}
-		      	else if(data=="Invalid list ID.")
-		      	{
-			      	$("#status").text("✖ Your list ID is invalid.");
-			      	$("#status").css("color", "red");
-		      	}
-		      	else if(data=="Already subscribed.")
-		      	{
-			      	$("#status").text("✔ You're already subscribed!");
-			      	$("#status").css("color", "#2fd1e4");
-			      	$form.find('.inputwrapper').remove();
-		      	}
-		      	else
-		      	{
-			      	$("#status").text("✔ You're subscribed!");
-			      	$("#status").css("color", "#2fd1e4");
-			      	$form.find('.inputwrapper').remove();
-		      	}
-		      }
-		      else
-		      {
-		      	alert("Sorry, unable to subscribe. Please try again later!");
-		      }
-		  }
-		);
+});
+
+function PrepareNewForms(){
+// formspree forms
+	$('.contact-form').each(function() {
+		var $contactForm = $(this);
+		$contactForm.submit(function(e) {
+			e.preventDefault();
+			var $submit = $('input:submit', $contactForm);
+			var defaultSubmitText = "Send";//$submit.val();
+			$.ajax({
+				url: '//formspree.io/info@redshiftmedia.com',
+				method: 'POST',
+				data: $(this).serialize(),
+				dataType: 'json',
+				beforeSend: function() {
+					//$contactForm.append('<div class="alert alert--loading">Sending message…</div>');
+					$submit.attr('disabled', true).val('Sending message…');
+				},
+				success: function(data) {
+					//$contactForm.append('<div class="alert alert--success">Message sent!</div>');
+					$submit.val('Message sent!');
+					setTimeout(function() {
+						//$('.alert--success').remove();
+						$submit.attr('disabled', false).val(defaultSubmitText);
+						$contactForm.remove();
+					}, 5000);
+				},
+				error: function(err) {
+					//$contactForm.find('.alert--loading').hide();
+					//$contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
+					$submit.val('Error! Check your email address');
+					setTimeout(function() {
+						//$('.alert--error').remove();
+						$submit.attr('disabled', false).val(defaultSubmitText);
+					}, 5000);
+				}
+			});
+		});
 	});
-	$("#signup-form").keypress(function(e) {
+	// ajax subscribe form
+	$('.subscribeform').each(function() {
+		var form = $(this);
+		form.keypress(function(e) {
 		    if(e.keyCode == 13) {
 		    	e.preventDefault(); 
 				$(this).submit();
 		    }
 		});
-	$("#submit-btn").click(function(e){
-		e.preventDefault(); 
-		$("#signup-form").submit();
-	});
-});
+		form.submit(function(e){
+			e.preventDefault(); 
+		
+			var $form = $(this),
+			email = $form.find('input[name="email"]').val(),
+			url = $form.attr('action');
+		
+			$.post(url, {email:email},
+			  function(data) {
+			      if(data)
+			      {
+			      	if(data=="Some fields are missing.")
+			      	{
+				      	$("#status").text("✖ Please fill in your name and email.");
+				      	$("#status").css("color", "red");
+			      	}
+			      	else if(data=="Invalid email address.")
+			      	{
+				      	$("#status").text("✖ Your email address is invalid.");
+				      	$("#status").css("color", "red");
+			      	}
+			      	else if(data=="Invalid list ID.")
+			      	{
+				      	$("#status").text("✖ Your list ID is invalid.");
+				      	$("#status").css("color", "red");
+			      	}
+			      	else if(data=="Already subscribed.")
+			      	{
+				      	$("#status").text("✔ You're already subscribed!");
+				      	$("#status").css("color", "#2fd1e4");
+				      	$form.find('.inputwrapper').remove();
+			      	}
+			      	else
+			      	{
+				      	$("#status").text("✔ You're subscribed!");
+				      	$("#status").css("color", "#2fd1e4");
+				      	$form.find('.inputwrapper').remove();
+			      	}
+			      }
+			      else
+			      {
+			      	alert("Sorry, unable to subscribe. Please try again later!");
+			      }
+			 	});
+			});
+		});
 
-function GetAnalticsOnClickString(label){
+}
+function showAfter(delay, el) {
+    setTimeout(function() { el.classList.add("show") }, delay);
+}
+function jshowAfter(delay, el) {
+    setTimeout(function() { console.log("showing thing "+el.name+" after delay:"+delay);el.addClass("show")}, delay);
+}
+function GetAnalyticsOnClickString(label,storeLastLabelClicked=true){
 	s=""
 	if (sendAnalyticsEvents){
-		s=`onClick="ga('send', 'event', 'choiceLink', 'click', '${label}');"`;
+		if(storeLastLabelClicked){
+			s=`onClick="ga('send', 'event', 'choiceLink', 'click', '${label}');lastLabelClicked='${label}';"`;
+		} else {
+			s=`onClick="ga('send', 'event', 'choiceLink', 'click', '${label}');"`;
+		}
 	} else {
-		s="";
+		if(storeLastLabelClicked){
+			s=`onClick="lastLabelClicked='${label}';"`;
+		} else {
+			s="";
+		}
 	}
 	if(label == 'start.libertarian'){
 		sendAnalyticsEvents=false;
 	}
 	return s;
 }
+function scrollDown() {
+    if(clicks==0){
+	   	return;
+	}
+    $('html, body').scrollTo(targetY-20,800,{limit:false});
+}
 
 (function(storyContent) {
 
     story = new inkjs.Story(storyContent);
-    var storyContainer = document.querySelectorAll('#story')[0];
+    storyContainer = document.querySelectorAll('#story')[0];
 
-    function showAfter(delay, el) {
-        setTimeout(function() { el.classList.add("show") }, delay);
-    }
-	function jshowAfter(delay, el) {
-        setTimeout(function() { el.addClass("show")}, delay);
-    }
-    function scrollDown() {
-    	if(clicks==0){
-	    	return;
-	    }
-      	$('html, body').scrollTo(targetY-20,800,{limit:false});
 
-    }
+
 
     function continueStory() {
 
@@ -142,7 +190,7 @@ function GetAnalticsOnClickString(label){
             if(story.currentTags.indexOf('playlist') > -1){
 				$(".container").first().append('<iframe width="600" height="338" src="https://www.youtube.com/embed/videoseries?list=PL4jzSARXHuuwhBfzGNYhSVE4gJ8zmRnTH" frameborder="0" allowfullscreen></iframe>');
             } else if(story.currentTags.indexOf('subscribe') > -1){
-            	$(".container").first().append('<form class="subscribeform" action="signup.php" method="POST" accept-charset="utf-8" name="signup-form" id="signup-form"><span class="inputwrapper"><p><label for="email"/>Your email address</label><input type="text" name="email"/></p></span><p id="status"></p></form>');
+            	$(".container").first().append('<form class="subscribeform" action="signup.php" method="POST" accept-charset="utf-8" name="signup-form" id="signup-form"><span class="inputwrapper"><p><input type="text" name="email" placeholder="Your email address" required/></p></span><p id="status"></p></form>');
            		jshowAfter(delay, $(".subscribeform").last());
            		//$(".subscribeform").last().addClass("show");
             } else if(story.currentTags.indexOf('survey') > -1){
@@ -151,50 +199,42 @@ function GetAnalticsOnClickString(label){
 				$(".container").first().append('<div class="typeform-widget" data-url="https://bitbutter.typeform.com/to/sMIAWC" data-transparency="100" data-hide-headers=true data-hide-footer=true style="width: 100%; height: 500px;"></div><script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id="typef_orm",b="https://s3-eu-west-1.amazonaws.com/share.typeform.com/";if(!gi.call(d,id)){js=ce.call(d,"script");js.id=id;js.src=b+"widget.js";q=gt.call(d,"script")[0];q.parentNode.insertBefore(js,q)}})()</script>');
 				$(".typeform-widget").last().addClass("show");
             } else {
+	            var paragraphElement = document.createElement('div');
+	            paragraphElement.className+=" fadein";
+	            // Style prior choices differently
+	            if(story.currentTags.indexOf('b') > -1){
+	            	paragraphElement.className += " priorChoice";
+	            }
+	            // Create paragraph element
+	            mardownRenderedAsHTML= markdown.toHTML(paragraphText);
+	            //console.log(mardownRenderedAsHTML);
+	            mardownRenderedAsHTML = mardownRenderedAsHTML.replaceAll('&amp;br&amp;', '<br/>');
 
-            
-            var paragraphElement = document.createElement('div');
-            paragraphElement.className+=" fadein";
-            // Style prior choices differently
-            if(story.currentTags.indexOf('b') > -1){
-            	paragraphElement.className += " priorChoice";
-            }
-            // Create paragraph element
-            mardownRenderedAsHTML= markdown.toHTML(paragraphText);
-            //console.log(mardownRenderedAsHTML);
-            mardownRenderedAsHTML = mardownRenderedAsHTML.replaceAll('&amp;br&amp;', '<br/>');
+	            paragraphElement.innerHTML = mardownRenderedAsHTML;//markup html with p tags removed;
+	            storyContainer.appendChild(paragraphElement);
 
-            paragraphElement.innerHTML = mardownRenderedAsHTML;//markup html with p tags removed;
-            storyContainer.appendChild(paragraphElement);
+	            // Set external links to target _blank
+	            var links = document.links;
+				for (var i = 0, linksLength = links.length; i < linksLength; i++) {
+				   if (links[i].href != 'http://exploreistaxationtheft.com/#') {
+				       links[i].target = '_blank';
+				       links[i].className = 'externalLink';
+				   } 
+				}
 
-            // Set external links to target _blank
-            var links = document.links;
-			for (var i = 0, linksLength = links.length; i < linksLength; i++) {
-			   if (links[i].href != 'http://exploreistaxationtheft.com/#') {
-			       links[i].target = '_blank';
-			       links[i].className = 'externalLink';
-			   } 
-			}
-			// Set external links to target _blank
-            var links = document.links;
-			for (var i = 0, linksLength = links.length; i < linksLength; i++) {
-			   if (links[i].href != 'http://exploreistaxationtheft.com/#') {
-			       links[i].target = '_blank';
-			       links[i].className = 'externalLink';
-			   } 
-			}
-
-			// save point
-            if(story.currentTags.indexOf('s') > -1){
-            	saved = story.state.toJson();
-            }
+				// save point
+	            if(story.currentTags.indexOf('s') > -1){
+	            	saved = story.state.toJson();
+	            }
 
             }
 
-			            
+			PrepareNewForms();
             // Fade in paragraph after a short delay
+            if(paragraphElement){
             showAfter(delay, paragraphElement);
             delay += 200.0;
+        	}
         }
 
         // Create HTML choices from ink choices
@@ -213,13 +253,15 @@ function GetAnalticsOnClickString(label){
             	label = split[1];
             	if(split[0]=="Wait, let me go back and answer that last bit differently."){
             		console.log('wait line detected');
-            		choiceParagraphElement.innerHTML = `<a href='#' class=\"goback\" ${GetAnalticsOnClickString(label)}>${modified}</a>`;
+            		choiceParagraphElement.innerHTML = `<a href='#' class=\"goback\" ${GetAnalyticsOnClickString(label)}>${modified}</a>`;
             	} else{
-					choiceParagraphElement.innerHTML = `<a href='#' ${GetAnalticsOnClickString(label)}>${modified}</a>`;
+					choiceParagraphElement.innerHTML = `<a href='#' ${GetAnalyticsOnClickString(label)}>${modified}</a>`;
             	}
             } else {
+            	console.log("split length "+split.length);
             	choiceParagraphElement.innerHTML = `<a href='#'>${modified}</a>`;
             }
+
             storyContainer.appendChild(choiceParagraphElement);
 
             choiceAnchorEl = choiceParagraphElement.querySelectorAll("a")[0];
@@ -228,8 +270,9 @@ function GetAnalticsOnClickString(label){
             	$(choiceAnchorEl).addClass("firstChoice");
             }
 
-            // Click on choice
+            // Set up click handlers for this anchor
             $(choiceAnchorEl).click(function(event) {
+            	RemoveContactForms();
             	clicks++;
             	// store Y position of topmost choice for scrolling tha page
             	targetY=$(".firstChoice").last().offset().top;
@@ -260,7 +303,9 @@ function GetAnalticsOnClickString(label){
             showAfter(delay, choiceParagraphElement);
             delay += 200.0;
         });
-
+        if(choiceCounter>1){
+        	CreateObjectionAnchor(delay);
+        }
         if(clicks>0){
         	scrollDown();
     	}
@@ -270,4 +315,32 @@ function GetAnalticsOnClickString(label){
     continueStory();
 
 })(storyContent);
+
+function CreateObjectionAnchor(delay){
+	console.log("trying to CreateObjectionAnchor delay:"+delay+" last label "+lastLabelClicked);
+	if(lastLabelClicked=="NONE"){
+		return;
+	}
+	var choiceParagraphElement = document.createElement('p');
+    choiceParagraphElement.classList.add("choice");
+	choiceParagraphElement.innerHTML = `<a href='#' class="objectionAnchor" ${GetAnalyticsOnClickString("objectionAnchor",false)}>None of these answers represents my view.</a>`;
+	choiceAnchorEl = choiceParagraphElement.querySelectorAll("a")[0];
+	$(choiceAnchorEl).click(function(event) {
+		// hide choice anchor
+		$(choiceAnchorEl).addClass("hidden");
+		// create form
+		$(".container").first().append('<form class="contact-form show" action="//formspree.io/info@redshiftmedia.com" method="post"><textarea name="Message" cols="30" rows="10" placeholder="Let me know the response you\'d have chosen if it were available. Please be civil." required></textarea><input type="email" name="Email" placeholder="Your email address" required><!-- CONFIG --><input class="is-hidden" type="text" name="_gotcha"><input type="hidden" name="_subject" value="exploreistaxationtheft feedback: '+lastLabelClicked+'"><!-- /CONFIG --><input class="submit" type="submit" value="Send"><br/><a href=\'#\' onclick="RemoveContactForms(event)">Cancel</a></form>');
+		PrepareNewForms();
+		event.preventDefault();
+	});
+	jshowAfter(delay,$(choiceParagraphElement));
+	storyContainer.appendChild(choiceParagraphElement);
+}
+
+function RemoveContactForms(event){
+	if(event){
+		event.preventDefault();
+	}
+	$('.contact-form').remove();
+}
 

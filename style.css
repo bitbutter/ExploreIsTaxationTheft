@@ -94,7 +94,30 @@ form{
 form.show{
     opacity: 1.0;
 }
-input[type=text] {
+
+input, textarea {
+background-color: rgba(197, 243, 248, 0.32);
+padding:6px;
+border-width:3px;
+border-color:rgb(44, 209, 228);
+border-style:solid;
+min-width:200px;
+min-width:220px;
+display:block;
+clear:both;
+margin-bottom: 15px;
+}
+
+input.submit {
+box-sizing: content-box;
+background-color: rgb(44, 209, 228);
+color:#fff;
+cursor: pointer;
+display: inline-block;
+font-weight: bold;
+}
+
+/*input[type=text] {
 background-color: rgba(244, 138, 152, 0.1);
 padding:6px;
 border-width:3px;
@@ -102,4 +125,36 @@ border-color:rgba(244, 138, 152, 1);
 border-style:solid;
 margin-left: 10px;
 min-width:190px;
+}*/
+
+input.is-hidden{
+    display:none;
+}
+
+.hidden{
+display:none;
+}
+
+.contact-form{
+	margin-left:40px;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color:rgb(44, 209, 228);
+  font-style:italic;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color:rgb(44, 209, 228);
+  font-style:italic;
+
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color:rgb(44, 209, 228);
+  font-style:italic;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color:rgb(44, 209, 228);
+  font-style:italic;
+}
+.objectionAnchor{
 }

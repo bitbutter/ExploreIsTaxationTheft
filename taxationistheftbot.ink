@@ -14,8 +14,6 @@
 * Hold on, what is this thing?[%%%start.whatisthis] # b
     This is a simulated conversation. The aim is to present the main arguments that people make for and against the claim that taxation is theft.
     Online exchanges between real people on this subject are often clouded by impatience and animosity. This resource is offered as a way to explore the disagreement without any put-downs or name-calling.
-    Would you like to get an email with a link when I publish a new project? Enter your email address and press return.
-    Subscribe # subscribe
         --(metaopts)
         ** Who made this? # b
             [![patreon](images/patreonlink.png)](http:\/\/patreon.com/tomaszkaye)
@@ -247,7 +245,8 @@ Altogether I think this field strongly points to the existence of property, and 
 You'll be finished in about five minutes. ->->
 === ending ===
 {start.libertarian && not what_mistake.stoppedpretending:_You've reached the end. Please stop pretending you disagree that taxation is theft now!_ }
-Thanks for working through the conversation. I hope you found it interesting. Would you like to get an email with a link when I publish something new? Enter your email address and press return.
+Thanks for working through the conversation. I hope you found it interesting.
+Would you like to get an email with a link when I publish something new? Enter your email address and press return.
 Subscribe # subscribe
 This website, and most of my videos are funded by my supporters. If you'd like to see more projects like this being published, you can become a supporter too via \[Patreon\](http:\/\/patreon.com/tomaszkaye).
 \[![patreon](images/patreonlink.png)\](http:\/\/patreon.com/tomaszkaye)
